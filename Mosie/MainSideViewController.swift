@@ -10,6 +10,11 @@ import UIKit
 
 class MainSideViewController: UIViewController {
 
+    struct Navigation {
+        static let AudioSelected = "AudioSelected"
+        static let VideoSelected = "VideoSelected"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +26,27 @@ class MainSideViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func audioTabButtonClicked(sender: AnyObject) {
+        postNotification(0)
+    
+    }
+    
+    @IBAction func videoTabButtonClicked(sender: AnyObject) {
+        postNotification(1)
+        
+    }
+    
+    func postNotification(index: Int){
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        switch index {
+        case 0:
+            notificationCenter.postNotification(NSNotification(name: Navigation.AudioSelected, object: self))
+        case 1:
+            notificationCenter.postNotification(NSNotification(name: Navigation.VideoSelected, object: self))
+        default:
+            break
+        }
+    }
 
     /*
     // MARK: - Navigation

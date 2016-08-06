@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,10 +21,52 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFf-RC-rDs">
                                 <rect key="frame" x="0.0" y="20" width="80" height="580"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZC-TS-8M6">
+                                        <rect key="frame" x="15" y="490" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="3Dc-Ov-wdL"/>
+                                            <constraint firstAttribute="width" secondItem="PZC-TS-8M6" secondAttribute="height" multiplier="1:1" id="zhR-5a-2O5"/>
+                                        </constraints>
+                                        <state key="normal" title="Video"/>
+                                        <connections>
+                                            <action selector="videoTabButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RTk-MR-UzN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pE-Bg-2F3">
+                                        <rect key="frame" x="15" y="410" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="4pE-Bg-2F3" secondAttribute="height" multiplier="1:1" id="1GT-Ku-X3z"/>
+                                            <constraint firstAttribute="width" constant="50" id="hB5-ri-9CD"/>
+                                        </constraints>
+                                        <state key="normal" title="Audio"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="hB5-ri-9CD"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="audioTabButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9M-KG-iIg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.40784313729999999" green="0.16862745100000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="4pE-Bg-2F3" firstAttribute="centerX" secondItem="cFf-RC-rDs" secondAttribute="centerX" id="1nU-AA-LkI"/>
                                     <constraint firstAttribute="width" constant="80" id="7iV-NK-wuS"/>
+                                    <constraint firstAttribute="bottom" secondItem="PZC-TS-8M6" secondAttribute="bottom" constant="40" id="PPp-1T-uIa"/>
+                                    <constraint firstItem="4pE-Bg-2F3" firstAttribute="width" secondItem="4pE-Bg-2F3" secondAttribute="height" multiplier="1:1" id="ZFH-JI-lTm"/>
+                                    <constraint firstItem="4pE-Bg-2F3" firstAttribute="width" secondItem="PZC-TS-8M6" secondAttribute="width" id="d2r-Ge-PaR"/>
+                                    <constraint firstItem="PZC-TS-8M6" firstAttribute="centerX" secondItem="cFf-RC-rDs" secondAttribute="centerX" id="tF6-fX-vGf"/>
+                                    <constraint firstItem="PZC-TS-8M6" firstAttribute="top" secondItem="4pE-Bg-2F3" secondAttribute="bottom" constant="30" id="ym1-DV-3Ob"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZFH-JI-lTm"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25B-DH-XAZ">
                                 <rect key="frame" x="80" y="20" width="520" height="580"/>
@@ -61,10 +104,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation View Controller-->
         <scene sceneID="U9X-cS-UKX">
             <objects>
-                <navigationController navigationBarHidden="YES" id="DmW-3z-Qs3" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="DmW-3z-Qs3" customClass="MainNavigationViewController" customModule="Mosie" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="l8t-pR-PvW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
