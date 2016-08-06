@@ -2,17 +2,20 @@ PODS:
   - Alamofire (3.4.1)
   - MBProgressHUD (1.0.0)
   - SwiftyJSON (2.3.2)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - MBProgressHUD (~> 1.0.0)
   - SwiftyJSON
+  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 97068fbb51cb88611143fff5ca76b0fb583e5bf6
+PODFILE CHECKSUM: 2a1235507b382c545c12bed3dcfcf19b024c23b1
 
 COCOAPODS: 1.0.1
