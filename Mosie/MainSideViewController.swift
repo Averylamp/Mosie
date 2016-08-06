@@ -13,6 +13,7 @@ class MainSideViewController: UIViewController {
     struct Navigation {
         static let AudioSelected = "AudioSelected"
         static let VideoSelected = "VideoSelected"
+        static let SettingsSelected = "SettingsSelected"
     }
     
     override func viewDidLoad() {
@@ -36,6 +37,13 @@ class MainSideViewController: UIViewController {
         
     }
     
+    @IBAction func settingsTabButtonClicked(sender: AnyObject) {
+         postNotification(2)
+        
+    }
+    
+    
+    
     func postNotification(index: Int){
         let notificationCenter = NSNotificationCenter.defaultCenter()
         switch index {
@@ -43,6 +51,8 @@ class MainSideViewController: UIViewController {
             notificationCenter.postNotification(NSNotification(name: Navigation.AudioSelected, object: self))
         case 1:
             notificationCenter.postNotification(NSNotification(name: Navigation.VideoSelected, object: self))
+        case 2:
+            notificationCenter.postNotification(NSNotification(name: Navigation.SettingsSelected, object: self))
         default:
             break
         }

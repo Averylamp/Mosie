@@ -12,6 +12,7 @@ class MainNavigationViewController: UINavigationController {
 
     private var audioSelectedObserver: NSObjectProtocol?
     private var videoSelectedObserver: NSObjectProtocol?
+    private var settingsSelectedObserver: NSObjectProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +44,12 @@ class MainNavigationViewController: UINavigationController {
             let videoVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("VideoVCMain")
             
                 self.setViewControllers([videoVC], animated: true)
+        })
+        settingsSelectedObserver = notificationCenter.addObserverForName(MainSideViewController.Navigation.SettingsSelected, object: nil, queue: nil, usingBlock: { (notification) in
             
+            let videoVC = UIStoryboard(name: "SettingsStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("SettingsVC")
             
+            self.setViewControllers([videoVC], animated: true)
         })
     }
     

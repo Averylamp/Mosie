@@ -21,6 +21,8 @@
 		BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */; };
 		BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */; };
 		BB7DDEB11D56822500575A1F /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */; };
+		BBB369D11D568C5E008D43AE /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */; };
+		BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369D21D568C6E008D43AE /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVideoViewController.swift; sourceTree = "<group>"; };
 		BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAudioViewController.swift; sourceTree = "<group>"; };
 		BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
+		BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		BBB369D21D568C6E008D43AE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 			children = (
 				BB653FE51D56787E00AF80E8 /* AppDelegate.swift */,
 				BB653FE91D56787E00AF80E8 /* Main.storyboard */,
+				BBB369D41D568C80008D43AE /* Settings Section */,
 				BB65401C1D567B5000AF80E8 /* Video Section */,
 				BB65401D1D567B5800AF80E8 /* Audio Section */,
 				BB6540161D567AE100AF80E8 /* MainSideViewController.swift */,
@@ -181,6 +186,15 @@
 				BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */,
 			);
 			name = "Audio Section";
+			sourceTree = "<group>";
+		};
+		BBB369D41D568C80008D43AE /* Settings Section */ = {
+			isa = PBXGroup;
+			children = (
+				BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */,
+				BBB369D21D568C6E008D43AE /* SettingsViewController.swift */,
+			);
+			name = "Settings Section";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB369D11D568C5E008D43AE /* SettingsStoryboard.storyboard in Resources */,
 				BB653FF31D56787E00AF80E8 /* LaunchScreen.storyboard in Resources */,
 				BB6540191D567B4200AF80E8 /* VideoStoryboard.storyboard in Resources */,
 				BB65401B1D567B4A00AF80E8 /* AudioStoryboard.storyboard in Resources */,
@@ -369,6 +384,7 @@
 			files = (
 				BB6540171D567AE100AF80E8 /* MainSideViewController.swift in Sources */,
 				BB7DDEB11D56822500575A1F /* MainNavigationViewController.swift in Sources */,
+				BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */,
 				BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */,
 				BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */,
 				BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */,

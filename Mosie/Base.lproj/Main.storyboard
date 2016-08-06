@@ -51,14 +51,35 @@
                                             <action selector="audioTabButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9M-KG-iIg"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fc2-Oq-QhP">
+                                        <rect key="frame" x="15.5" y="330" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="9ve-pQ-zp0"/>
+                                            <constraint firstAttribute="width" secondItem="fc2-Oq-QhP" secondAttribute="height" multiplier="1:1" id="gqX-pg-XFC"/>
+                                        </constraints>
+                                        <state key="normal" title="Settings"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="9ve-pQ-zp0"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="settingsTabButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7R-0F-rzb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40784313729999999" green="0.16862745100000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="4pE-Bg-2F3" firstAttribute="centerX" secondItem="cFf-RC-rDs" secondAttribute="centerX" id="1nU-AA-LkI"/>
                                     <constraint firstAttribute="width" constant="80" id="7iV-NK-wuS"/>
+                                    <constraint firstItem="fc2-Oq-QhP" firstAttribute="width" secondItem="PZC-TS-8M6" secondAttribute="width" id="ABT-re-oo8"/>
+                                    <constraint firstItem="4pE-Bg-2F3" firstAttribute="top" secondItem="fc2-Oq-QhP" secondAttribute="bottom" constant="30" id="EGz-PF-DoS"/>
                                     <constraint firstAttribute="bottom" secondItem="PZC-TS-8M6" secondAttribute="bottom" constant="40" id="PPp-1T-uIa"/>
                                     <constraint firstItem="4pE-Bg-2F3" firstAttribute="width" secondItem="4pE-Bg-2F3" secondAttribute="height" multiplier="1:1" id="ZFH-JI-lTm"/>
+                                    <constraint firstItem="fc2-Oq-QhP" firstAttribute="width" secondItem="fc2-Oq-QhP" secondAttribute="height" multiplier="1:1" id="ZIw-f4-bqi"/>
                                     <constraint firstItem="4pE-Bg-2F3" firstAttribute="width" secondItem="PZC-TS-8M6" secondAttribute="width" id="d2r-Ge-PaR"/>
+                                    <constraint firstItem="fc2-Oq-QhP" firstAttribute="centerX" secondItem="cFf-RC-rDs" secondAttribute="centerX" id="ktR-sZ-5qG"/>
                                     <constraint firstItem="PZC-TS-8M6" firstAttribute="centerX" secondItem="cFf-RC-rDs" secondAttribute="centerX" id="tF6-fX-vGf"/>
                                     <constraint firstItem="PZC-TS-8M6" firstAttribute="top" secondItem="4pE-Bg-2F3" secondAttribute="bottom" constant="30" id="ym1-DV-3Ob"/>
                                 </constraints>
