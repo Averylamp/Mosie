@@ -20,6 +20,8 @@ class MainSideViewController: UIViewController {
     @IBOutlet weak var audioButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
+    @IBOutlet var tabMenuButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         videoButton.layer.cornerRadius = videoButton.frame.width / 2
@@ -35,16 +37,20 @@ class MainSideViewController: UIViewController {
     
     @IBAction func audioTabButtonClicked(sender: AnyObject) {
         postNotification(0)
-    
+        tabMenuButtons.forEach { $0.alpha = 1.0 }
+        audioButton.alpha = 0.6
     }
     
     @IBAction func videoTabButtonClicked(sender: AnyObject) {
         postNotification(1)
-        
+        tabMenuButtons.forEach { $0.alpha = 1.0 }
+        videoButton.alpha = 0.6
     }
     
     @IBAction func settingsTabButtonClicked(sender: AnyObject) {
         postNotification(2)
+        tabMenuButtons.forEach { $0.alpha = 1.0 }
+        settingsButton.alpha = 0.6
         
     }
     
