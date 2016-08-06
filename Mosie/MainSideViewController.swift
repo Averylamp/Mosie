@@ -16,9 +16,15 @@ class MainSideViewController: UIViewController {
         static let SettingsSelected = "SettingsSelected"
     }
     
+    @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet weak var audioButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        videoButton.layer.cornerRadius = videoButton.frame.width / 2
+        audioButton.layer.cornerRadius = audioButton.frame.width / 2
+        settingsButton.layer.cornerRadius = settingsButton.frame.width / 2
         // Do any additional setup after loading the view.
     }
 
@@ -38,7 +44,7 @@ class MainSideViewController: UIViewController {
     }
     
     @IBAction func settingsTabButtonClicked(sender: AnyObject) {
-         postNotification(2)
+        postNotification(2)
         
     }
     

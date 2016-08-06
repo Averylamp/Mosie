@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Root Video View Controller-->
@@ -17,14 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zx-vA-Rc4">
-                                <rect key="frame" x="190" y="124" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MosieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0l4-WV-bHp">
+                                <rect key="frame" x="120" y="30" width="360" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3v7-Yo-BZP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0l4-WV-bHp" firstAttribute="top" secondItem="gS2-ro-KMn" secondAttribute="bottom" constant="10" id="3e7-lh-gC1"/>
+                            <constraint firstItem="0l4-WV-bHp" firstAttribute="width" secondItem="4lh-YT-JXu" secondAttribute="width" multiplier="0.6" id="uNg-n8-iGn"/>
+                            <constraint firstItem="0l4-WV-bHp" firstAttribute="centerX" secondItem="4lh-YT-JXu" secondAttribute="centerX" id="vJV-JY-6zV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82W-kq-nju" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -32,4 +38,7 @@
             <point key="canvasLocation" x="313" y="238"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MosieLogo" width="400" height="200"/>
+    </resources>
 </document>
