@@ -3,7 +3,18 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Panton-Light.otf">
+            <string>Panton-Light</string>
+        </mutableArray>
+        <mutableArray key="Panton-Regular.otf">
+            <string>Panton-Regular</string>
+            <string>Panton-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Root Audio View Controller-->
         <scene sceneID="aEb-FC-3BA">
@@ -17,15 +28,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg4-uq-CIm">
-                                <rect key="frame" x="139" y="107" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-Gh-zOh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongCell" id="AOS-Gp-vhN" customClass="SongTableViewCell" customModule="Mosie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AOS-Gp-vhN" id="Q46-oj-R4j">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC3-9z-Eyp">
+                                                    <rect key="frame" x="33" y="18" width="63.5" height="63.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="EC3-9z-Eyp" secondAttribute="height" multiplier="1:1" id="FI2-6Y-QPZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="35"/>
+                                                    <color key="textColor" red="0.0" green="0.792156862745098" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Levels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1P-aw-79v">
+                                                    <rect key="frame" x="116" y="18" width="376" height="26.5"/>
+                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="22"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avicii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IL-Hp-e6q">
+                                                    <rect key="frame" x="116" y="45.5" width="376" height="26.5"/>
+                                                    <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6IL-Hp-e6q" secondAttribute="bottom" constant="20" id="7IB-rA-VF9"/>
+                                                <constraint firstItem="6IL-Hp-e6q" firstAttribute="centerX" secondItem="R1P-aw-79v" secondAttribute="centerX" id="8MQ-iP-IMH"/>
+                                                <constraint firstItem="R1P-aw-79v" firstAttribute="leading" secondItem="EC3-9z-Eyp" secondAttribute="trailing" constant="20" id="9zc-FF-BeG"/>
+                                                <constraint firstItem="R1P-aw-79v" firstAttribute="top" secondItem="Q46-oj-R4j" secondAttribute="topMargin" constant="10" id="Bnf-hK-JwG"/>
+                                                <constraint firstItem="EC3-9z-Eyp" firstAttribute="top" secondItem="Q46-oj-R4j" secondAttribute="topMargin" constant="10" id="C8U-ZY-CsY"/>
+                                                <constraint firstItem="EC3-9z-Eyp" firstAttribute="leading" secondItem="Q46-oj-R4j" secondAttribute="leadingMargin" constant="25" id="PLt-yL-Osr"/>
+                                                <constraint firstItem="6IL-Hp-e6q" firstAttribute="height" secondItem="R1P-aw-79v" secondAttribute="height" id="QbQ-Rt-uUk"/>
+                                                <constraint firstItem="EC3-9z-Eyp" firstAttribute="centerY" secondItem="Q46-oj-R4j" secondAttribute="centerY" id="TED-3L-Xfq"/>
+                                                <constraint firstItem="6IL-Hp-e6q" firstAttribute="width" secondItem="R1P-aw-79v" secondAttribute="width" id="dUr-gW-qwH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EC3-9z-Eyp" secondAttribute="bottom" constant="10" id="pDX-uM-k1i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="R1P-aw-79v" secondAttribute="trailing" constant="100" id="tST-a4-QSv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="songArtistLabel" destination="6IL-Hp-e6q" id="raO-Um-wH2"/>
+                                            <outlet property="songNumberLabel" destination="EC3-9z-Eyp" id="19f-0i-WgN"/>
+                                            <outlet property="songTitleLabel" destination="R1P-aw-79v" id="0IP-bs-zNf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b1Z-Gh-zOh" firstAttribute="centerY" secondItem="Qaa-pn-qEo" secondAttribute="centerY" id="1Nd-SH-6xe"/>
+                            <constraint firstItem="b1Z-Gh-zOh" firstAttribute="centerX" secondItem="Qaa-pn-qEo" secondAttribute="centerX" id="NWv-W6-63m"/>
+                            <constraint firstItem="b1Z-Gh-zOh" firstAttribute="height" secondItem="Qaa-pn-qEo" secondAttribute="height" id="PSU-Jf-T4f"/>
+                            <constraint firstItem="b1Z-Gh-zOh" firstAttribute="width" secondItem="Qaa-pn-qEo" secondAttribute="width" id="hFf-D4-dzs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="songTableView" destination="b1Z-Gh-zOh" id="YiE-Fz-ara"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbv-qp-9cs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
