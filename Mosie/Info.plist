@@ -33,6 +33,23 @@
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Panton-Heavy.otf</string>
+		<string>Panton-SemiBold.otf</string>
+		<string>Panton-Black.otf</string>
+		<string>Panton-Bold.otf</string>
+		<string>Panton-ExtraBold.otf</string>
+		<string>Panton-ExtraLight.otf</string>
+		<string>Panton-Light.otf</string>
+		<string>Panton-Regular.otf</string>
+		<string>Panton-Thin.otf</string>
+		<string>Brandon_light.otf</string>
+		<string>Brandon_med.otf</string>
+		<string>Brandon_reg.otf</string>
 	</array>
 </dict>
 </plist>

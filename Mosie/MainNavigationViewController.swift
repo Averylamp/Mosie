@@ -41,7 +41,7 @@ class MainNavigationViewController: UINavigationController {
         })
         videoSelectedObserver = notificationCenter.addObserverForName(MainSideViewController.Navigation.VideoSelected, object: nil, queue: nil, usingBlock: { (notification) in
             
-            let videoVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("VideoVCMain")
+            let videoVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MoodVC")
             
                 self.setViewControllers([videoVC], animated: true)
         })

@@ -58,6 +58,7 @@
                                             <constraint firstAttribute="width" constant="50" id="9ve-pQ-zp0"/>
                                             <constraint firstAttribute="width" secondItem="fc2-Oq-QhP" secondAttribute="height" multiplier="1:1" id="gqX-pg-XFC"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Settings"/>
                                         <variation key="default">
                                             <mask key="constraints">

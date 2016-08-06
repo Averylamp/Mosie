@@ -23,6 +23,21 @@
 		BB7DDEB11D56822500575A1F /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */; };
 		BBB369D11D568C5E008D43AE /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */; };
 		BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369D21D568C6E008D43AE /* SettingsViewController.swift */; };
+		BBB369D81D569B7A008D43AE /* Brandon_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369D51D569B7A008D43AE /* Brandon_light.otf */; };
+		BBB369D91D569B7A008D43AE /* Brandon_med.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369D61D569B7A008D43AE /* Brandon_med.otf */; };
+		BBB369DA1D569B7A008D43AE /* Brandon_reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369D71D569B7A008D43AE /* Brandon_reg.ttf */; };
+		BBB369E41D569BAE008D43AE /* Panton-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369DB1D569BAE008D43AE /* Panton-Black.otf */; };
+		BBB369E51D569BAE008D43AE /* Panton-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369DC1D569BAE008D43AE /* Panton-Bold.otf */; };
+		BBB369E61D569BAE008D43AE /* Panton-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369DD1D569BAE008D43AE /* Panton-ExtraBold.otf */; };
+		BBB369E71D569BAE008D43AE /* Panton-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369DE1D569BAE008D43AE /* Panton-ExtraLight.otf */; };
+		BBB369E81D569BAE008D43AE /* Panton-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369DF1D569BAE008D43AE /* Panton-Heavy.otf */; };
+		BBB369E91D569BAE008D43AE /* Panton-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369E01D569BAE008D43AE /* Panton-Light.otf */; };
+		BBB369EA1D569BAE008D43AE /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369E11D569BAE008D43AE /* Panton-Regular.otf */; };
+		BBB369EB1D569BAE008D43AE /* Panton-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369E21D569BAE008D43AE /* Panton-SemiBold.otf */; };
+		BBB369EC1D569BAE008D43AE /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB369E31D569BAE008D43AE /* Panton-Thin.otf */; };
+		BBB369F01D569C45008D43AE /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369EF1D569C45008D43AE /* MoodViewController.swift */; };
+		BBB369F21D569D05008D43AE /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369F11D569D05008D43AE /* MoodCollectionViewCell.swift */; };
+		BBB369F41D569FAC008D43AE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369F31D569FAC008D43AE /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +82,21 @@
 		BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		BBB369D21D568C6E008D43AE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BBB369D51D569B7A008D43AE /* Brandon_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_light.otf; sourceTree = "<group>"; };
+		BBB369D61D569B7A008D43AE /* Brandon_med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_med.otf; sourceTree = "<group>"; };
+		BBB369D71D569B7A008D43AE /* Brandon_reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg.ttf; sourceTree = "<group>"; };
+		BBB369DB1D569BAE008D43AE /* Panton-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Black.otf"; sourceTree = "<group>"; };
+		BBB369DC1D569BAE008D43AE /* Panton-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Bold.otf"; sourceTree = "<group>"; };
+		BBB369DD1D569BAE008D43AE /* Panton-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-ExtraBold.otf"; sourceTree = "<group>"; };
+		BBB369DE1D569BAE008D43AE /* Panton-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-ExtraLight.otf"; sourceTree = "<group>"; };
+		BBB369DF1D569BAE008D43AE /* Panton-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Heavy.otf"; sourceTree = "<group>"; };
+		BBB369E01D569BAE008D43AE /* Panton-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Light.otf"; sourceTree = "<group>"; };
+		BBB369E11D569BAE008D43AE /* Panton-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Regular.otf"; sourceTree = "<group>"; };
+		BBB369E21D569BAE008D43AE /* Panton-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-SemiBold.otf"; sourceTree = "<group>"; };
+		BBB369E31D569BAE008D43AE /* Panton-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Thin.otf"; sourceTree = "<group>"; };
+		BBB369EF1D569C45008D43AE /* MoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
+		BBB369F11D569D05008D43AE /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		BBB369F31D569FAC008D43AE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,15 +169,16 @@
 			children = (
 				BB653FE51D56787E00AF80E8 /* AppDelegate.swift */,
 				BB653FE91D56787E00AF80E8 /* Main.storyboard */,
+				BB6540161D567AE100AF80E8 /* MainSideViewController.swift */,
+				BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */,
 				BBB369D41D568C80008D43AE /* Settings Section */,
 				BB65401C1D567B5000AF80E8 /* Video Section */,
 				BB65401D1D567B5800AF80E8 /* Audio Section */,
-				BB6540161D567AE100AF80E8 /* MainSideViewController.swift */,
-				BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */,
 				BB653FEF1D56787E00AF80E8 /* Assets.xcassets */,
 				BB653FF11D56787E00AF80E8 /* LaunchScreen.storyboard */,
 				BB653FF41D56787E00AF80E8 /* Info.plist */,
 				BB653FEC1D56787E00AF80E8 /* Mosie.xcdatamodeld */,
+				BBB369EE1D569C06008D43AE /* Assetts */,
 			);
 			path = Mosie;
 			sourceTree = "<group>";
@@ -174,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				BB6540181D567B4200AF80E8 /* VideoStoryboard.storyboard */,
+				BBB369F11D569D05008D43AE /* MoodCollectionViewCell.swift */,
+				BBB369EF1D569C45008D43AE /* MoodViewController.swift */,
 				BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */,
 			);
 			name = "Video Section";
@@ -195,6 +228,34 @@
 				BBB369D21D568C6E008D43AE /* SettingsViewController.swift */,
 			);
 			name = "Settings Section";
+			sourceTree = "<group>";
+		};
+		BBB369ED1D569BBB008D43AE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BBB369D51D569B7A008D43AE /* Brandon_light.otf */,
+				BBB369D61D569B7A008D43AE /* Brandon_med.otf */,
+				BBB369D71D569B7A008D43AE /* Brandon_reg.ttf */,
+				BBB369DB1D569BAE008D43AE /* Panton-Black.otf */,
+				BBB369DC1D569BAE008D43AE /* Panton-Bold.otf */,
+				BBB369DD1D569BAE008D43AE /* Panton-ExtraBold.otf */,
+				BBB369DE1D569BAE008D43AE /* Panton-ExtraLight.otf */,
+				BBB369DF1D569BAE008D43AE /* Panton-Heavy.otf */,
+				BBB369E01D569BAE008D43AE /* Panton-Light.otf */,
+				BBB369E11D569BAE008D43AE /* Panton-Regular.otf */,
+				BBB369E21D569BAE008D43AE /* Panton-SemiBold.otf */,
+				BBB369E31D569BAE008D43AE /* Panton-Thin.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		BBB369EE1D569C06008D43AE /* Assetts */ = {
+			isa = PBXGroup;
+			children = (
+				BBB369F31D569FAC008D43AE /* UIColorExtension.swift */,
+				BBB369ED1D569BBB008D43AE /* Fonts */,
+			);
+			name = Assetts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,12 +365,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB369EC1D569BAE008D43AE /* Panton-Thin.otf in Resources */,
 				BBB369D11D568C5E008D43AE /* SettingsStoryboard.storyboard in Resources */,
 				BB653FF31D56787E00AF80E8 /* LaunchScreen.storyboard in Resources */,
+				BBB369DA1D569B7A008D43AE /* Brandon_reg.ttf in Resources */,
+				BBB369E51D569BAE008D43AE /* Panton-Bold.otf in Resources */,
 				BB6540191D567B4200AF80E8 /* VideoStoryboard.storyboard in Resources */,
+				BBB369E71D569BAE008D43AE /* Panton-ExtraLight.otf in Resources */,
+				BBB369E61D569BAE008D43AE /* Panton-ExtraBold.otf in Resources */,
 				BB65401B1D567B4A00AF80E8 /* AudioStoryboard.storyboard in Resources */,
+				BBB369EA1D569BAE008D43AE /* Panton-Regular.otf in Resources */,
+				BBB369E91D569BAE008D43AE /* Panton-Light.otf in Resources */,
+				BBB369EB1D569BAE008D43AE /* Panton-SemiBold.otf in Resources */,
+				BBB369D81D569B7A008D43AE /* Brandon_light.otf in Resources */,
 				BB653FF01D56787E00AF80E8 /* Assets.xcassets in Resources */,
+				BBB369E41D569BAE008D43AE /* Panton-Black.otf in Resources */,
 				BB653FEB1D56787E00AF80E8 /* Main.storyboard in Resources */,
+				BBB369D91D569B7A008D43AE /* Brandon_med.otf in Resources */,
+				BBB369E81D569BAE008D43AE /* Panton-Heavy.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,10 +456,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6540171D567AE100AF80E8 /* MainSideViewController.swift in Sources */,
+				BBB369F21D569D05008D43AE /* MoodCollectionViewCell.swift in Sources */,
+				BBB369F01D569C45008D43AE /* MoodViewController.swift in Sources */,
 				BB7DDEB11D56822500575A1F /* MainNavigationViewController.swift in Sources */,
 				BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */,
 				BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */,
 				BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */,
+				BBB369F41D569FAC008D43AE /* UIColorExtension.swift in Sources */,
 				BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */,
 				BB653FE61D56787E00AF80E8 /* AppDelegate.swift in Sources */,
 			);
