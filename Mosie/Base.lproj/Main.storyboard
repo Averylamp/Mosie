@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Side View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainSideViewController" customModule="Mosie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFf-RC-rDs">
+                                <rect key="frame" x="0.0" y="20" width="80" height="580"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.16862745100000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7iV-NK-wuS"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25B-DH-XAZ">
+                                <rect key="frame" x="80" y="20" width="520" height="580"/>
+                                <connections>
+                                    <segue destination="DmW-3z-Qs3" kind="embed" id="Tuf-PM-J1Z"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cFf-RC-rDs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="23N-Zj-eU8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="25B-DH-XAZ" secondAttribute="bottom" id="9f4-Qb-aai"/>
+                            <constraint firstItem="25B-DH-XAZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hy7-K8-FEY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cFf-RC-rDs" secondAttribute="bottom" id="Jn1-pI-Lpe"/>
+                            <constraint firstItem="cFf-RC-rDs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bFa-Dn-gU7"/>
+                            <constraint firstItem="cFf-RC-rDs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="d3X-nk-HXU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cFf-RC-rDs" secondAttribute="bottom" id="hJN-Lp-FwG"/>
+                            <constraint firstItem="cFf-RC-rDs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oxJ-26-hSW"/>
+                            <constraint firstItem="cFf-RC-rDs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rYA-mo-eBq"/>
+                            <constraint firstItem="cFf-RC-rDs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="srR-1L-kK6"/>
+                            <constraint firstAttribute="trailing" secondItem="25B-DH-XAZ" secondAttribute="trailing" id="t9O-lk-cVR"/>
+                            <constraint firstItem="25B-DH-XAZ" firstAttribute="leading" secondItem="cFf-RC-rDs" secondAttribute="trailing" id="uNk-Z8-cWd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bFa-Dn-gU7"/>
+                                <exclude reference="oxJ-26-hSW"/>
+                                <exclude reference="rYA-mo-eBq"/>
+                                <exclude reference="srR-1L-kK6"/>
+                                <exclude reference="hJN-Lp-FwG"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U9X-cS-UKX">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="DmW-3z-Qs3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l8t-pR-PvW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gjW-nW-LLH" kind="relationship" relationship="rootViewController" id="2cY-36-L0C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npu-wo-eC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="-354"/>
+        </scene>
+        <!--VideoVCMain-->
+        <scene sceneID="cL1-sc-a1Y">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="VideoVC" storyboardName="VideoStoryboard" referencedIdentifier="VideoVCMain" id="gjW-nW-LLH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dX6-bn-aO4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zq4-L1-hCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758.5" y="-376"/>
+        </scene>
+        <!--AudioVCMain-->
+        <scene sceneID="KbQ-Ez-deV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AudioStoryboard" referencedIdentifier="AudioVCMain" id="GY3-BV-b89" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djB-QX-Amp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758.5" y="-296"/>
         </scene>
     </scenes>
 </document>

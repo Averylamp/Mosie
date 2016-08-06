@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3B6ED101F42E0546685277 /* Pods_Mosie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5FEBE3C9F20C65051667D9 /* Pods_Mosie.framework */; };
 		BB653FE61D56787E00AF80E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB653FE51D56787E00AF80E8 /* AppDelegate.swift */; };
-		BB653FE81D56787E00AF80E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB653FE71D56787E00AF80E8 /* ViewController.swift */; };
 		BB653FEB1D56787E00AF80E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB653FE91D56787E00AF80E8 /* Main.storyboard */; };
 		BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB653FEC1D56787E00AF80E8 /* Mosie.xcdatamodeld */; };
 		BB653FF01D56787E00AF80E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB653FEF1D56787E00AF80E8 /* Assets.xcassets */; };
 		BB653FF31D56787E00AF80E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB653FF11D56787E00AF80E8 /* LaunchScreen.storyboard */; };
 		BB653FFE1D56787E00AF80E8 /* MosieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB653FFD1D56787E00AF80E8 /* MosieTests.swift */; };
 		BB6540091D56787E00AF80E8 /* MosieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6540081D56787E00AF80E8 /* MosieUITests.swift */; };
+		BB6540171D567AE100AF80E8 /* MainSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6540161D567AE100AF80E8 /* MainSideViewController.swift */; };
+		BB6540191D567B4200AF80E8 /* VideoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6540181D567B4200AF80E8 /* VideoStoryboard.storyboard */; };
+		BB65401B1D567B4A00AF80E8 /* AudioStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB65401A1D567B4A00AF80E8 /* AudioStoryboard.storyboard */; };
+		BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */; };
+		BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A166084560381F32D30D388 /* Pods-Mosie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mosie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mosie/Pods-Mosie.release.xcconfig"; sourceTree = "<group>"; };
+		196996E2EAB79A9078E4D530 /* Pods-Mosie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mosie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mosie/Pods-Mosie.debug.xcconfig"; sourceTree = "<group>"; };
+		5C5FEBE3C9F20C65051667D9 /* Pods_Mosie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mosie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB653FE21D56787E00AF80E8 /* Mosie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mosie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB653FE51D56787E00AF80E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB653FE71D56787E00AF80E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB653FEA1D56787E00AF80E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB653FED1D56787E00AF80E8 /* Mosie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mosie.xcdatamodel; sourceTree = "<group>"; };
 		BB653FEF1D56787E00AF80E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		BB6540041D56787E00AF80E8 /* MosieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6540081D56787E00AF80E8 /* MosieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosieUITests.swift; sourceTree = "<group>"; };
 		BB65400A1D56787E00AF80E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB6540161D567AE100AF80E8 /* MainSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSideViewController.swift; sourceTree = "<group>"; };
+		BB6540181D567B4200AF80E8 /* VideoStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoStoryboard.storyboard; sourceTree = "<group>"; };
+		BB65401A1D567B4A00AF80E8 /* AudioStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioStoryboard.storyboard; sourceTree = "<group>"; };
+		BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVideoViewController.swift; sourceTree = "<group>"; };
+		BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAudioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3B6ED101F42E0546685277 /* Pods_Mosie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F522FDD5551E49DFBFAFEF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C5FEBE3C9F20C65051667D9 /* Pods_Mosie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A37C5D860482F8DEF4FC3B42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				196996E2EAB79A9078E4D530 /* Pods-Mosie.debug.xcconfig */,
+				0A166084560381F32D30D388 /* Pods-Mosie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BB653FD91D56787E00AF80E8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +113,8 @@
 				BB653FFC1D56787E00AF80E8 /* MosieTests */,
 				BB6540071D56787E00AF80E8 /* MosieUITests */,
 				BB653FE31D56787E00AF80E8 /* Products */,
+				A37C5D860482F8DEF4FC3B42 /* Pods */,
+				3F522FDD5551E49DFBFAFEF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				BB653FE51D56787E00AF80E8 /* AppDelegate.swift */,
-				BB653FE71D56787E00AF80E8 /* ViewController.swift */,
 				BB653FE91D56787E00AF80E8 /* Main.storyboard */,
+				BB65401C1D567B5000AF80E8 /* Video Section */,
+				BB65401D1D567B5800AF80E8 /* Audio Section */,
+				BB6540161D567AE100AF80E8 /* MainSideViewController.swift */,
 				BB653FEF1D56787E00AF80E8 /* Assets.xcassets */,
 				BB653FF11D56787E00AF80E8 /* LaunchScreen.storyboard */,
 				BB653FF41D56787E00AF80E8 /* Info.plist */,
@@ -128,6 +162,24 @@
 			path = MosieUITests;
 			sourceTree = "<group>";
 		};
+		BB65401C1D567B5000AF80E8 /* Video Section */ = {
+			isa = PBXGroup;
+			children = (
+				BB6540181D567B4200AF80E8 /* VideoStoryboard.storyboard */,
+				BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */,
+			);
+			name = "Video Section";
+			sourceTree = "<group>";
+		};
+		BB65401D1D567B5800AF80E8 /* Audio Section */ = {
+			isa = PBXGroup;
+			children = (
+				BB65401A1D567B4A00AF80E8 /* AudioStoryboard.storyboard */,
+				BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */,
+			);
+			name = "Audio Section";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB65400D1D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "Mosie" */;
 			buildPhases = (
+				0F69969F5DBEE81BAA6C463C /* [CP] Check Pods Manifest.lock */,
 				BB653FDE1D56787E00AF80E8 /* Sources */,
 				BB653FDF1D56787E00AF80E8 /* Frameworks */,
 				BB653FE01D56787E00AF80E8 /* Resources */,
+				6327B5F846B45E8944160D79 /* [CP] Embed Pods Frameworks */,
+				23B186AB58D144D7439E41A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB653FF31D56787E00AF80E8 /* LaunchScreen.storyboard in Resources */,
+				BB6540191D567B4200AF80E8 /* VideoStoryboard.storyboard in Resources */,
+				BB65401B1D567B4A00AF80E8 /* AudioStoryboard.storyboard in Resources */,
 				BB653FF01D56787E00AF80E8 /* Assets.xcassets in Resources */,
 				BB653FEB1D56787E00AF80E8 /* Main.storyboard in Resources */,
 			);
@@ -254,13 +311,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F69969F5DBEE81BAA6C463C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		23B186AB58D144D7439E41A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mosie/Pods-Mosie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6327B5F846B45E8944160D79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mosie/Pods-Mosie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB653FDE1D56787E00AF80E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB653FE81D56787E00AF80E8 /* ViewController.swift in Sources */,
+				BB6540171D567AE100AF80E8 /* MainSideViewController.swift in Sources */,
 				BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */,
+				BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */,
+				BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */,
 				BB653FE61D56787E00AF80E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +510,7 @@
 		};
 		BB65400E1D56787E00AF80E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 196996E2EAB79A9078E4D530 /* Pods-Mosie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mosie/Info.plist;
@@ -414,6 +522,7 @@
 		};
 		BB65400F1D56787E00AF80E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A166084560381F32D30D388 /* Pods-Mosie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mosie/Info.plist;
@@ -488,6 +597,7 @@
 				BB65400F1D56787E00AF80E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB6540101D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "MosieTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +606,7 @@
 				BB6540121D56787E00AF80E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB6540131D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "MosieUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +615,7 @@
 				BB6540151D56787E00AF80E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
