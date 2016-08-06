@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB653FE61D56787E00AF80E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB653FE51D56787E00AF80E8 /* AppDelegate.swift */; };
+		BB653FE81D56787E00AF80E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB653FE71D56787E00AF80E8 /* ViewController.swift */; };
+		BB653FEB1D56787E00AF80E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB653FE91D56787E00AF80E8 /* Main.storyboard */; };
+		BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB653FEC1D56787E00AF80E8 /* Mosie.xcdatamodeld */; };
+		BB653FF01D56787E00AF80E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB653FEF1D56787E00AF80E8 /* Assets.xcassets */; };
+		BB653FF31D56787E00AF80E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB653FF11D56787E00AF80E8 /* LaunchScreen.storyboard */; };
+		BB653FFE1D56787E00AF80E8 /* MosieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB653FFD1D56787E00AF80E8 /* MosieTests.swift */; };
+		BB6540091D56787E00AF80E8 /* MosieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6540081D56787E00AF80E8 /* MosieUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB653FFA1D56787E00AF80E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB653FDA1D56787E00AF80E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB653FE11D56787E00AF80E8;
+			remoteInfo = Mosie;
+		};
+		BB6540051D56787E00AF80E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB653FDA1D56787E00AF80E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB653FE11D56787E00AF80E8;
+			remoteInfo = Mosie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB653FE21D56787E00AF80E8 /* Mosie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mosie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB653FE51D56787E00AF80E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB653FE71D56787E00AF80E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB653FEA1D56787E00AF80E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB653FED1D56787E00AF80E8 /* Mosie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mosie.xcdatamodel; sourceTree = "<group>"; };
+		BB653FEF1D56787E00AF80E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB653FF21D56787E00AF80E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB653FF41D56787E00AF80E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB653FF91D56787E00AF80E8 /* MosieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB653FFD1D56787E00AF80E8 /* MosieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosieTests.swift; sourceTree = "<group>"; };
+		BB653FFF1D56787E00AF80E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB6540041D56787E00AF80E8 /* MosieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB6540081D56787E00AF80E8 /* MosieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosieUITests.swift; sourceTree = "<group>"; };
+		BB65400A1D56787E00AF80E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB653FDF1D56787E00AF80E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB653FF61D56787E00AF80E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB6540011D56787E00AF80E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB653FD91D56787E00AF80E8 = {
+			isa = PBXGroup;
+			children = (
+				BB653FE41D56787E00AF80E8 /* Mosie */,
+				BB653FFC1D56787E00AF80E8 /* MosieTests */,
+				BB6540071D56787E00AF80E8 /* MosieUITests */,
+				BB653FE31D56787E00AF80E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB653FE31D56787E00AF80E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB653FE21D56787E00AF80E8 /* Mosie.app */,
+				BB653FF91D56787E00AF80E8 /* MosieTests.xctest */,
+				BB6540041D56787E00AF80E8 /* MosieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB653FE41D56787E00AF80E8 /* Mosie */ = {
+			isa = PBXGroup;
+			children = (
+				BB653FE51D56787E00AF80E8 /* AppDelegate.swift */,
+				BB653FE71D56787E00AF80E8 /* ViewController.swift */,
+				BB653FE91D56787E00AF80E8 /* Main.storyboard */,
+				BB653FEF1D56787E00AF80E8 /* Assets.xcassets */,
+				BB653FF11D56787E00AF80E8 /* LaunchScreen.storyboard */,
+				BB653FF41D56787E00AF80E8 /* Info.plist */,
+				BB653FEC1D56787E00AF80E8 /* Mosie.xcdatamodeld */,
+			);
+			path = Mosie;
+			sourceTree = "<group>";
+		};
+		BB653FFC1D56787E00AF80E8 /* MosieTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB653FFD1D56787E00AF80E8 /* MosieTests.swift */,
+				BB653FFF1D56787E00AF80E8 /* Info.plist */,
+			);
+			path = MosieTests;
+			sourceTree = "<group>";
+		};
+		BB6540071D56787E00AF80E8 /* MosieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB6540081D56787E00AF80E8 /* MosieUITests.swift */,
+				BB65400A1D56787E00AF80E8 /* Info.plist */,
+			);
+			path = MosieUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB653FE11D56787E00AF80E8 /* Mosie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB65400D1D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "Mosie" */;
+			buildPhases = (
+				BB653FDE1D56787E00AF80E8 /* Sources */,
+				BB653FDF1D56787E00AF80E8 /* Frameworks */,
+				BB653FE01D56787E00AF80E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mosie;
+			productName = Mosie;
+			productReference = BB653FE21D56787E00AF80E8 /* Mosie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB653FF81D56787E00AF80E8 /* MosieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB6540101D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "MosieTests" */;
+			buildPhases = (
+				BB653FF51D56787E00AF80E8 /* Sources */,
+				BB653FF61D56787E00AF80E8 /* Frameworks */,
+				BB653FF71D56787E00AF80E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB653FFB1D56787E00AF80E8 /* PBXTargetDependency */,
+			);
+			name = MosieTests;
+			productName = MosieTests;
+			productReference = BB653FF91D56787E00AF80E8 /* MosieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB6540031D56787E00AF80E8 /* MosieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB6540131D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "MosieUITests" */;
+			buildPhases = (
+				BB6540001D56787E00AF80E8 /* Sources */,
+				BB6540011D56787E00AF80E8 /* Frameworks */,
+				BB6540021D56787E00AF80E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB6540061D56787E00AF80E8 /* PBXTargetDependency */,
+			);
+			name = MosieUITests;
+			productName = MosieUITests;
+			productReference = BB6540041D56787E00AF80E8 /* MosieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB653FDA1D56787E00AF80E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = MemeMasters;
+				TargetAttributes = {
+					BB653FE11D56787E00AF80E8 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					BB653FF81D56787E00AF80E8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BB653FE11D56787E00AF80E8;
+					};
+					BB6540031D56787E00AF80E8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BB653FE11D56787E00AF80E8;
+					};
+				};
+			};
+			buildConfigurationList = BB653FDD1D56787E00AF80E8 /* Build configuration list for PBXProject "Mosie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB653FD91D56787E00AF80E8;
+			productRefGroup = BB653FE31D56787E00AF80E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB653FE11D56787E00AF80E8 /* Mosie */,
+				BB653FF81D56787E00AF80E8 /* MosieTests */,
+				BB6540031D56787E00AF80E8 /* MosieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB653FE01D56787E00AF80E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB653FF31D56787E00AF80E8 /* LaunchScreen.storyboard in Resources */,
+				BB653FF01D56787E00AF80E8 /* Assets.xcassets in Resources */,
+				BB653FEB1D56787E00AF80E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB653FF71D56787E00AF80E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB6540021D56787E00AF80E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB653FDE1D56787E00AF80E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB653FE81D56787E00AF80E8 /* ViewController.swift in Sources */,
+				BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */,
+				BB653FE61D56787E00AF80E8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB653FF51D56787E00AF80E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB653FFE1D56787E00AF80E8 /* MosieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB6540001D56787E00AF80E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB6540091D56787E00AF80E8 /* MosieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB653FFB1D56787E00AF80E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB653FE11D56787E00AF80E8 /* Mosie */;
+			targetProxy = BB653FFA1D56787E00AF80E8 /* PBXContainerItemProxy */;
+		};
+		BB6540061D56787E00AF80E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB653FE11D56787E00AF80E8 /* Mosie */;
+			targetProxy = BB6540051D56787E00AF80E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB653FE91D56787E00AF80E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB653FEA1D56787E00AF80E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB653FF11D56787E00AF80E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB653FF21D56787E00AF80E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB65400B1D56787E00AF80E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		BB65400C1D56787E00AF80E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB65400E1D56787E00AF80E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Mosie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeMasters.Mosie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB65400F1D56787E00AF80E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Mosie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeMasters.Mosie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BB6540111D56787E00AF80E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MosieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeMasters.MosieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mosie.app/Mosie";
+			};
+			name = Debug;
+		};
+		BB6540121D56787E00AF80E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MosieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeMasters.MosieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mosie.app/Mosie";
+			};
+			name = Release;
+		};
+		BB6540141D56787E00AF80E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MosieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeMasters.MosieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Mosie;
+			};
+			name = Debug;
+		};
+		BB6540151D56787E00AF80E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MosieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MemeMasters.MosieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Mosie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB653FDD1D56787E00AF80E8 /* Build configuration list for PBXProject "Mosie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB65400B1D56787E00AF80E8 /* Debug */,
+				BB65400C1D56787E00AF80E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB65400D1D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "Mosie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB65400E1D56787E00AF80E8 /* Debug */,
+				BB65400F1D56787E00AF80E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB6540101D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "MosieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6540111D56787E00AF80E8 /* Debug */,
+				BB6540121D56787E00AF80E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB6540131D56787E00AF80E8 /* Build configuration list for PBXNativeTarget "MosieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6540141D56787E00AF80E8 /* Debug */,
+				BB6540151D56787E00AF80E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BB653FEC1D56787E00AF80E8 /* Mosie.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BB653FED1D56787E00AF80E8 /* Mosie.xcdatamodel */,
+			);
+			currentVersion = BB653FED1D56787E00AF80E8 /* Mosie.xcdatamodel */;
+			path = Mosie.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BB653FDA1D56787E00AF80E8 /* Project object */;
+}
