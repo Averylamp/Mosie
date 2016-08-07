@@ -15,12 +15,21 @@ class APIMagic {
                 
                 let json = JSON(data: data!)
                 closure(results: json["message"]["body"]["track_list"].array! as Array<JSON>)
-
         }
-        
+    }
+    func getLyrics(trackId: String, closure: (lyrics: String) -> Void) {
+        Alamofire.request(.GET, "https://api.musixmatch.com/ws/1.1/track.lyrics.get", parameters: ["apikey": "63b3335a7fe1aa6d6084fdbf53671583", "track_id": trackId], headers: ["Accept" : "application/json"])
+            .response { request, response, data, error in
+                let json = JSON(data: data!)
+                let lyrics:String? = json["message"]["body"]["lyrics"]["lyrics_body"].string
+                if let lyric = lyrics {
+                    closure(lyrics: lyric)
+                } else {
+                    closure(lyrics: "FUCK NO LYRICS FOUND")
+                }
         }
+    }
     func playSong(spotifyId: String) {
-        print("ayy")
         Alamofire.request(.POST, "http://10.20.6.202:8090/select", parameters: [
             "ContentItem": [
                 "source": "SPOTIFY",
@@ -31,10 +40,7 @@ class APIMagic {
             .response { request, response, data, error in
                 print("\(response)")
                 print("\(error)")
-                print("lmao")
-
         }
-        
     }
 }
 
