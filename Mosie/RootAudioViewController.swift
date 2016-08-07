@@ -9,10 +9,9 @@
 import UIKit
 
 class RootAudioViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        APIMagic().playSpotify();
         // Do any additional setup after loading the view.
     }
 
