@@ -28,7 +28,7 @@ class APIMagic {
                 print("Lyrics: \(json)")
                 if let lyric = lyrics {
                     if lyric.characters.count == 0 {
-                        return                     closure(lyrics: "FUCK NO LYRICS FOUND")
+                        return                     closure(lyrics: "NO LYRICS FOUND")
 
                     }
                     closure(lyrics: lyric)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class MoodViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -33,18 +34,35 @@ class MoodViewController: UIViewController, UICollectionViewDataSource, UICollec
         return 4
     }
     
+    var progressHUD = MBProgressHUD()
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("Item \(indexPath.item) Selected")
         let cell = collectionView.cellForItemAtIndexPath(indexPath);
         
+        progressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        progressHUD.mode = .Indeterminate
+        progressHUD.label.text = "Playing Music"
+        progressHUD.color = UIColor(white: 1.0, alpha: 1.0)
+        progressHUD.label.textColor = UIColor.darkGrayColor()
+        progressHUD.detailsLabel.text = ""
+        progressHUD.detailsLabel.textColor = UIColor.darkGrayColor()
+        progressHUD.activityIndicatorColor = UIColor.darkGrayColor()
+        progressHUD.dimBackground = true
+   
+        
         if cell!.tag == 1 { // happy
             APIMagic().playPlaylist("spotify:user:1249991492:playlist:6jfh1sX0fX06rwYNmjbBKt")
+            progressHUD.detailsLabel.text = "Happy!😃"
         } else if cell!.tag == 2 { // excited
             APIMagic().playPlaylist("spotify:user:1249991492:playlist:3uI1toPZXVhmLprsGXQFkV")
+            progressHUD.detailsLabel.text = "Excited!! 🤗"
         } else if cell!.tag == 3 { // angry
             APIMagic().playPlaylist("spotify:user:1249991492:playlist:3M6etJu6FIaZgB7WYTxa8j")
+            progressHUD.detailsLabel.text = "Angry 😡"
         } else { // sad
             APIMagic().playPlaylist("spotify:user:1249991492:playlist:1cxBlGujdByoiMyANqeUqN")
+            progressHUD.detailsLabel.text = "Sad 😭"
         }
     }
     

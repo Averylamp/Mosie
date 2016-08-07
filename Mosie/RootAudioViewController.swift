@@ -72,12 +72,21 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
             self.delay(0.5, closure: {
                 self.progressHUD.detailsLabel.text = "\(results.count) songs found"
             })
+            if results.count == 0{
+                self.delay(1.5, closure: {
+                    MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                })
+                
+                self.activeDictionary = self.songDictioniariesAll
+                return
+            }
             
             self.delay(1.5, closure: {
                 self.progressHUD.detailsLabel.text = "Checking Lyrics"
                 
             })
             var activeConnections = 0
+            
             for index in 0..<results.count{
                 let lyrics_id:String = String(results[0]["track"]["track_id"].number as! Int)
 //                                print(results[index])
@@ -191,6 +200,7 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         self.songTitleLabel.text = activeDictionary[indexPath.row]["songTitle"] as! String
         self.songArtistLabel.text = activeDictionary[indexPath.row]["songArtist"] as! String
+        APIMagic().playSong(self.activeDictionary[indexPath.row]["spotifyURI"] as! String)
     }
     
     
