@@ -17,16 +17,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        application.statusBarHidden = true
         // Override point for customization after application launch.
-        
+
         APIMagic().searchSpotify("memes") { (results) in
             print(results)
         }
+//        let loginURL = SPTAuth.defaultInstance().loginURL;
+//        delay(0.1) {
+//            application.openURL(loginURL)
+//        }
 
         return true
     }
 
-    
+
+
+    func loginUsingSession(session: SPTSession) {
+        self.player = SPTAudioStreamingController.sharedInstance()
+        self.player?.delegate = self
+        do{
+        try self.player?.startWithClientId("56bf06f32ffe40e4ad1e414dca7f6f97")
+        }catch{
+
+        }
+        self.player?.loginWithAccessToken(session.accessToken)
+    }
+
+    func audioStreamingDidLogin(audioStreaming: SPTAudioStreamingController!) {
+        self.player?.playURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp")) { (error) in
+            if (error != nil) {
+                print("failed to play \(error)")
+            }
+        }
+    }
+
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -87,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
             abort()
         }
-        
+
         return coordinator
     }()
 
@@ -116,4 +141,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

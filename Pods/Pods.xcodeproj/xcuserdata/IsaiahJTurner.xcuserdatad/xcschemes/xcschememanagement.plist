@@ -11,6 +11,16 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>BAHYouTubeOAuth-BAHYouTubeOAuth.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>BAHYouTubeOAuth.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,6 +44,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
@@ -82,12 +97,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>75D0D388279656F14217EC90F36697B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8A2309D9B74FA5F26F1DC2E1835B7145</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92274141B207CDB035417ABA066C065B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1BF4F5693304E12846EFADAAD33A7F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,12 +132,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B56BDB9EAFCAAB2411C8A5FA19CB92C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B9CEF66ECB9AA0BF73F6A444D1A0CA05</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BC84F7F761B5C66C0F0D26D8BC63B2A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF314B1658FE32A371887BB6F321594F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF6B69FAC1EB0F9ABE6E64C0ED7466E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E32E0DBDBCE226C0BE2C343A1184979F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2218161A74DD0259BD9E6951C4710E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

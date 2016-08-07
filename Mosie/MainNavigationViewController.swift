@@ -13,6 +13,7 @@ class MainNavigationViewController: UINavigationController {
     private var audioSelectedObserver: NSObjectProtocol?
     private var videoSelectedObserver: NSObjectProtocol?
     private var settingsSelectedObserver: NSObjectProtocol?
+    private var moodSelectedObserver: NSObjectProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,15 +42,20 @@ class MainNavigationViewController: UINavigationController {
         })
         videoSelectedObserver = notificationCenter.addObserverForName(MainSideViewController.Navigation.VideoSelected, object: nil, queue: nil, usingBlock: { (notification) in
             
-            let videoVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MoodVC")
+            let videoVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("VideoVCMain")
             
                 self.setViewControllers([videoVC], animated: true)
         })
         settingsSelectedObserver = notificationCenter.addObserverForName(MainSideViewController.Navigation.SettingsSelected, object: nil, queue: nil, usingBlock: { (notification) in
             
-            let videoVC = UIStoryboard(name: "SettingsStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("SettingsVC")
+            let settingsVC = UIStoryboard(name: "SettingsStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("SettingsVC")
             
-            self.setViewControllers([videoVC], animated: true)
+            self.setViewControllers([settingsVC], animated: true)
+        })
+        moodSelectedObserver = notificationCenter.addObserverForName(MainSideViewController.Navigation.MoodSelected, object: nil, queue: nil, usingBlock: { (notification) in
+            
+            let moodVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MoodVC")
+            self.setViewControllers([moodVC], animated: true)
         })
     }
     
@@ -61,6 +67,12 @@ class MainNavigationViewController: UINavigationController {
         }
         if videoSelectedObserver != nil{
             notificationCenter.removeObserver(videoSelectedObserver!)
+        }
+        if settingsSelectedObserver != nil{
+            notificationCenter.removeObserver(settingsSelectedObserver!)
+        }
+        if moodSelectedObserver != nil{
+            notificationCenter.removeObserver(moodSelectedObserver!)
         }
     }
 
