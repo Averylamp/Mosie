@@ -28,7 +28,6 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
         self.view.backgroundColor = UIColor(rgba: "#F5C3230A")
         videoSearchTextField.delegate = self
         
-<<<<<<< HEAD
         let engine = Engine(key: "AIzaSyCgwWIve2NhQOb5IHMdXxDaRHOnDrLdrLg")
         let request = Search(.Term("VEVO", [.Video: [.Statistics, .ContentDetails], .Channel: [.Statistics]]))
         engine.search(request)
@@ -38,14 +37,12 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
                // print("VEVO:\n\(formattedItems.joinWithSeparator("\n"))")
         }
 
-=======
 //        youtubeEngine = Engine(key: "AIzaSyCgwWIve2NhQOb5IHMdXxDaRHOnDrLdrLg")
 //
 //
 //        let youtubeAuth = BAHYouTubeOAuth()
 //        youtubeAuth.authenticateWithYouTubeUsingYouTubeClientID("486857137228-u7067h82gkgfcjl6pnc8bc9a7l4s888v.apps.googleusercontent.com", youTubeClientSecret: "", responseType: <#T##String!#>, scope: <#T##String!#>, state: <#T##String!#>, appURLCallBack: <#T##String!#>, accessType: <#T##String!#>, viewController: <#T##AnyObject!#>, <#T##completelion: ((Bool, String!, String!) -> Void)!##((Bool, String!, String!) -> Void)!##(Bool, String!, String!) -> Void#>)
 //        
->>>>>>> origin/master
         // Do any additional setup after loading the view.
     }
     

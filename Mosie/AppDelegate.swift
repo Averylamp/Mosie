@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarHidden = true
         // Override point for customization after application launch.
 
-        APIMagic().searchSpotify("memes") { (results) in
+        APIMagic().searchSpotify("Death of a Bachelor") { (results) in
             print(results)
         }
 //        let loginURL = SPTAuth.defaultInstance().loginURL;
@@ -33,24 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-    func loginUsingSession(session: SPTSession) {
-        self.player = SPTAudioStreamingController.sharedInstance()
-        self.player?.delegate = self
-        do{
-        try self.player?.startWithClientId("56bf06f32ffe40e4ad1e414dca7f6f97")
-        }catch{
-
-        }
-        self.player?.loginWithAccessToken(session.accessToken)
-    }
-
-    func audioStreamingDidLogin(audioStreaming: SPTAudioStreamingController!) {
-        self.player?.playURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp")) { (error) in
-            if (error != nil) {
-                print("failed to play \(error)")
-            }
-        }
-    }
 
     
     func applicationWillResignActive(application: UIApplication) {
