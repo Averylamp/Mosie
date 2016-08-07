@@ -23,6 +23,7 @@
 		BB65401B1D567B4A00AF80E8 /* AudioStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB65401A1D567B4A00AF80E8 /* AudioStoryboard.storyboard */; };
 		BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */; };
 		BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */; };
+		BB674FBB1D56AC76000C9A35 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB674FBA1D56AC76000C9A35 /* SongTableViewCell.swift */; };
 		BB7DDEB11D56822500575A1F /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */; };
 		BBB369D11D568C5E008D43AE /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */; };
 		BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369D21D568C6E008D43AE /* SettingsViewController.swift */; };
@@ -41,6 +42,8 @@
 		BBB369F01D569C45008D43AE /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369EF1D569C45008D43AE /* MoodViewController.swift */; };
 		BBB369F21D569D05008D43AE /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369F11D569D05008D43AE /* MoodCollectionViewCell.swift */; };
 		BBB369F41D569FAC008D43AE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369F31D569FAC008D43AE /* UIColorExtension.swift */; };
+		BBB369F91D56A7D9008D43AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB369F81D56A7D9008D43AE /* AVFoundation.framework */; };
+		BBB369FB1D56A7E7008D43AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,7 @@
 		BB65401A1D567B4A00AF80E8 /* AudioStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioStoryboard.storyboard; sourceTree = "<group>"; };
 		BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVideoViewController.swift; sourceTree = "<group>"; };
 		BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAudioViewController.swift; sourceTree = "<group>"; };
+		BB674FBA1D56AC76000C9A35 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		BBB369D21D568C6E008D43AE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		BBB369EF1D569C45008D43AE /* MoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		BBB369F11D569D05008D43AE /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBB369F31D569FAC008D43AE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		BBB369F81D56A7D9008D43AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B9D83E41D56B34C00DB01EE /* AVFoundation.framework in Frameworks */,
+				BBB369FB1D56A7E7008D43AE /* SystemConfiguration.framework in Frameworks */,
 				6E3B6ED101F42E0546685277 /* Pods_Mosie.framework in Frameworks */,
 				8B9D83DC1D56AC6B00DB01EE /* Spotify.framework in Frameworks */,
 			);
@@ -156,6 +163,7 @@
 		BB653FD91D56787E00AF80E8 = {
 			isa = PBXGroup;
 			children = (
+				BBB369F71D56A6CB008D43AE /* Frameworks */,
 				BB653FE41D56787E00AF80E8 /* Mosie */,
 				BB653FFC1D56787E00AF80E8 /* MosieTests */,
 				BB6540071D56787E00AF80E8 /* MosieUITests */,
@@ -229,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				BB65401A1D567B4A00AF80E8 /* AudioStoryboard.storyboard */,
+				BB674FBA1D56AC76000C9A35 /* SongTableViewCell.swift */,
 				BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */,
 			);
 			name = "Audio Section";
@@ -269,6 +278,15 @@
 				BBB369ED1D569BBB008D43AE /* Fonts */,
 			);
 			name = Assetts;
+			sourceTree = "<group>";
+		};
+		BBB369F71D56A6CB008D43AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */,
+				BBB369F81D56A7D9008D43AE /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +490,7 @@
 				BBB369F21D569D05008D43AE /* MoodCollectionViewCell.swift in Sources */,
 				BBB369F01D569C45008D43AE /* MoodViewController.swift in Sources */,
 				8B9D83DE1D56AC9F00DB01EE /* APIMagic.swift in Sources */,
+				BB674FBB1D56AC76000C9A35 /* SongTableViewCell.swift in Sources */,
 				BB7DDEB11D56822500575A1F /* MainNavigationViewController.swift in Sources */,
 				BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */,
 				BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */,
