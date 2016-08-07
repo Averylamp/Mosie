@@ -66,23 +66,45 @@ class APIMagic {
         }
     }
     
-    func isNaughty (lyrics:String) -> Bool {
+    func isNaughty (lyrics:String) -> Array<String>? {
         
         var count = 0;
-        let blocked:[String] = ["fuck", "ass","bitch","dick", "damn","suck", "booty","butt", "cocaine","shit","nigga", "heroine", "murder","sex", "freak", "fucking", "fucker","motherfucker", "fucked","kill", "penis","cunt", "pussy", "thong","condom","naked", "cock","rape","porn","drugs", "death", "blood"];
+        var found = [] as [String]
+        let blocked:[String] = ["fuck", "ass","bitch","dick", "damn","suck", "booty","butt", "cocaine","shit","nigga", "heroine", "murder","sex", "freak", "fucking", "fucker","motherfucker", "fucked","kill", "penis","cunt", "pussy", "thong","condom","naked", "cock","rape","porn","drugs", "death", "blood", "gemma"];
         
         //var lyrics : NSString = "Random text containing blocked words, which it should not contain. Like fuck, cunt, nigga";
         
         for word in blocked {
             if lyrics.lowercaseString.containsString(word) {
                 count += 1;
+                found.append(word)
             }
         }
         if(count > 0){
-            print("This song contains \(count) bad words");
-            return true;
+            print("This song contains \(found) bad words");
+            return found;
         } else {
-            return false;
+            return nil;
+        }
+    }
+    func pause() {
+        Alamofire.request(.POST, "http://" + SPEAKER_IP + ":8090/volume", parameters: [
+            "volume": 0
+            ], headers: ["Accept" : "application/json"], encoding: .JSON)
+            .response { request, response, data, error in
+                if ((error) != nil) {
+                    print("\(error)")
+                }
+        }
+    }
+    func play() {
+        Alamofire.request(.POST, "http://" + SPEAKER_IP + ":8090/volume", parameters: [
+            "volume": 40
+            ], headers: ["Accept" : "application/json"], encoding: .JSON)
+            .response { request, response, data, error in
+                if ((error) != nil) {
+                    print("\(error)")
+                }
         }
     }
 }

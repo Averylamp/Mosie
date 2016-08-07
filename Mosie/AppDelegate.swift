@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let api = APIMagic();
-        api.searchSpotify("Baby Justin") { (results) in
+        api.searchSpotify("fuck") { (results) in
             let lyrics_id:String = String(results[0]["track"]["track_id"].number as! Int)
             api.getLyrics(lyrics_id) { (lyrics) in
                 print(lyrics)
