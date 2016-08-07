@@ -20,10 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         application.statusBarHidden = true
         // Override point for customization after application launch.
-
-//        APIMagic().searchSpotify("Death of a Bachelor") { (results) in
-//            print(results)
-//            APIMagic().playSong(results[0]["track"]["track_spotify_id"].string!);
+        
+//        let api = APIMagic();
+//        api.searchSpotify("Baby Justin") { (results) in
+//            let lyrics_id:String = String(results[0]["track"]["track_id"].number as! Int)
+//            api.getLyrics(lyrics_id) { (lyrics) in
+//                print(lyrics)
+//
+//                print("Naughty: \(api.isNaughty(lyrics))")
+//            api.playSong(results[0]["track"]["track_spotify_id"].string!);
+//
+////        APIMagic().searchSpotify("Death of a Bachelor") { (results) in
+////            print(results)
+////            APIMagic().playSong(results[0]["track"]["track_spotify_id"].string!);
+////        }
+//
+//            }
 //        }
 //        let loginURL = SPTAuth.defaultInstance().loginURL;
 //        delay(0.1) {

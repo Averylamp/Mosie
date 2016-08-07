@@ -169,6 +169,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cleanOnlySwitch" destination="AWo-6w-s0U" id="244-Xd-0Dh"/>
                         <outlet property="searchBarField" destination="1kd-2o-CwC" id="UpI-6v-MG5"/>
                         <outlet property="searchBarIconImage" destination="WFE-Rh-50h" id="FZf-X7-xgQ"/>
                         <outlet property="songPlayerBottomConstraint" destination="MSe-el-C3a" id="9I0-1M-y7e"/>

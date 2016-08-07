@@ -12,6 +12,7 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var songTableView: UITableView!
     
+    @IBOutlet weak var cleanOnlySwitch: UISwitch!
     
     @IBOutlet weak var searchBarField: UITextField!
     
@@ -48,10 +49,17 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         textField.resignFirstResponder()
         print("Searching for  \(textField.text!)")
         
-        APIMagic().searchSpotify("\(textField.text!)") { (results) in
-            //            print(results)
-            
-            self.songDictioniaries = [[String:AnyObject]](count: results.count, repeatedValue: [String:AnyObject]())
+        //        APIMagic().searchSpotify("\(textField.text!)") { (results) in
+        //            //            print(results)
+        //
+        //
+        //        }
+        
+        
+        let api = APIMagic();
+        api.searchSpotify(textField.text!) { (results) in
+            let lyrics_id:String = String(results[0]["track"]["track_id"].number as! Int)
+            self.songDictioniariesAll = [[String:AnyObject]](count: results.count, repeatedValue: [String:AnyObject]())
             
             for index in 0..<results.count{
                 //                print(results[index]["track"]["artist_name"].string!)
@@ -59,16 +67,22 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
                 storeDictionary["songArtist"] = results[index]["track"]["artist_name"].string!
                 storeDictionary["songTitle"] = results[index]["track"]["track_name"].string!
                 print("\(storeDictionary)")
-                self.songDictioniaries[index] = storeDictionary
+                self.songDictioniariesAll[index] = storeDictionary
             }
             
             self.songTableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
             
+            api.getLyrics(lyrics_id) { (lyrics) in
+                print(lyrics)
+                
+                print("Naughty: \(api.isNaughty(lyrics))")
+                api.playSong(results[0]["track"]["track_spotify_id"].string!);
+                
+            }
         }
-        
         return true
     }
-
+    
     func textFieldDidBeginEditing(textField: UITextField) {
         textField.layoutIfNeeded()
         UIView.animateWithDuration(0.6) {
@@ -88,14 +102,15 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //MARK: - Table View Delegate/Data Source
     
-    var songDictioniaries = [[String:AnyObject]]()
+    var songDictioniariesAll = [[String:AnyObject]]()
+    var songDictioniariesClean = [[String:AnyObject]]()
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songDictioniaries.count
+        return songDictioniariesAll.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -112,8 +127,8 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         cell.songNumberLabel.text = "\(indexPath.row + 1)"
         
-        cell.songTitleLabel.text = songDictioniaries[indexPath.row]["songTitle"] as! String
-        cell.songArtistLabel.text = songDictioniaries[indexPath.row]["songArtist"] as! String
+        cell.songTitleLabel.text = songDictioniariesAll[indexPath.row]["songTitle"] as! String
+        cell.songArtistLabel.text = songDictioniariesAll[indexPath.row]["songArtist"] as! String
         let backgroundSelected = UIView(frame: CGRectMake(0,0, cell.frame.width, 80))
         backgroundSelected.backgroundColor = UIColor(red: 0.980, green: 0.867, blue: 0.553, alpha: 1.00)
         cell.selectedBackgroundView = backgroundSelected
@@ -122,7 +137,7 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        UIView.animateWithDuration(1.0) { 
+        UIView.animateWithDuration(1.0) {
             self.songPlayerBottomConstraint.constant = 0
             self.view.layoutIfNeeded()
         }

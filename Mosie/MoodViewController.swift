@@ -35,6 +35,17 @@ class MoodViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("Item \(indexPath.item) Selected")
+        let cell = collectionView.cellForItemAtIndexPath(indexPath);
+        
+        if cell!.tag == 1 { // happy
+            APIMagic().playPlaylist("spotify:user:1249991492:playlist:6jfh1sX0fX06rwYNmjbBKt")
+        } else if cell!.tag == 2 { // excited
+            APIMagic().playPlaylist("spotify:user:1249991492:playlist:3uI1toPZXVhmLprsGXQFkV")
+        } else if cell!.tag == 3 { // angry
+            APIMagic().playPlaylist("spotify:user:1249991492:playlist:3M6etJu6FIaZgB7WYTxa8j")
+        } else { // sad
+            APIMagic().playPlaylist("spotify:user:1249991492:playlist:1cxBlGujdByoiMyANqeUqN")
+        }
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -51,12 +62,16 @@ class MoodViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         switch indexPath.item % 4 {
         case 0:
+            cell.tag = 1
             cell.moodMonsterImage.image = UIImage(named: "happy")
         case 1:
+            cell.tag = 2
             cell.moodMonsterImage.image = UIImage(named: "excited")
         case 2:
+            cell.tag = 3
             cell.moodMonsterImage.image = UIImage(named: "angry")
         case 3:
+            cell.tag = 4
             cell.moodMonsterImage.image = UIImage(named: "sad")
         default:
             cell.moodMonsterImage.image = UIImage(named: "happy")
