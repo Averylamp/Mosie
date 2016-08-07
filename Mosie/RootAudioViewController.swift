@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class RootAudioViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate  {
     
@@ -17,13 +18,15 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var searchBarField: UITextField!
     
     @IBOutlet weak var searchBarIconImage: UIImageView!
+    @IBOutlet weak var songTitleLabel: UILabel!
     
+    @IBOutlet weak var songArtistLabel: UILabel!
     @IBOutlet weak var songPlayerBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red: 0.620, green: 0.353, blue: 0.545, alpha: 1.00)
+        self.view.backgroundColor = UIColor(red: 1.000, green: 0.992, blue: 0.965, alpha: 1.00)
         songTableView.separatorStyle = .None
         songTableView.dataSource = self
         songTableView.delegate   = self
@@ -45,44 +48,88 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
+    var progressHUD = MBProgressHUD()
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         print("Searching for  \(textField.text!)")
         
-        //        APIMagic().searchSpotify("\(textField.text!)") { (results) in
-        //            //            print(results)
-        //
-        //
-        //        }
+        progressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        progressHUD.mode = .Indeterminate
+        progressHUD.label.text = "Searching for \(textField.text!)"
+        progressHUD.color = UIColor(white: 1.0, alpha: 1.0)
+        progressHUD.label.textColor = UIColor.darkGrayColor()
+        progressHUD.detailsLabel.text = ""
+        progressHUD.detailsLabel.textColor = UIColor.darkGrayColor()
+        progressHUD.activityIndicatorColor = UIColor.darkGrayColor()
+        progressHUD.dimBackground = true
         
         
         let api = APIMagic();
         api.searchSpotify(textField.text!) { (results) in
-            let lyrics_id:String = String(results[0]["track"]["track_id"].number as! Int)
-            self.songDictioniariesAll = [[String:AnyObject]](count: results.count, repeatedValue: [String:AnyObject]())
+            self.songDictioniariesAll = [[String:AnyObject]]()
+            self.songDictioniariesClean = [[String:AnyObject]]()
+            self.delay(0.5, closure: {
+                self.progressHUD.detailsLabel.text = "\(results.count) songs found"
+            })
             
+            self.delay(1.5, closure: {
+                self.progressHUD.detailsLabel.text = "Checking Lyrics"
+                
+            })
+            var activeConnections = 0
             for index in 0..<results.count{
-                //                print(results[index]["track"]["artist_name"].string!)
+                let lyrics_id:String = String(results[0]["track"]["track_id"].number as! Int)
+//                                print(results[index])
                 var storeDictionary = [String:AnyObject]()
                 storeDictionary["songArtist"] = results[index]["track"]["artist_name"].string!
                 storeDictionary["songTitle"] = results[index]["track"]["track_name"].string!
-                print("\(storeDictionary)")
-                self.songDictioniariesAll[index] = storeDictionary
+                storeDictionary["spotifyURI"] = results[index]["track"]["track_spotify_id"].string!
+//                print("\(storeDictionary)")
+                
+                activeConnections += 1
+                api.getLyrics(lyrics_id) { (lyrics) in
+                    print(lyrics)
+                    let naughtyResults = api.isNaughty(lyrics)
+                    print("Naughty: \(naughtyResults)")
+                    storeDictionary["naughty_results"] = naughtyResults
+                    if naughtyResults == nil{
+                        print("clean song")
+                        self.songDictioniariesClean.append(storeDictionary)
+                    }
+                    self.songDictioniariesAll.append(storeDictionary)
+//                    api.playSong(results[0]["track"]["track_spotify_id"].string!);
+                    activeConnections -= 1
+                    if activeConnections == 0 {
+                        if self.cleanOnlySwitch.on {
+                            self.activeDictionary = self.songDictioniariesClean
+                        }else{
+                            self.activeDictionary = self.songDictioniariesAll
+                        }
+                        print("Reloading Table")
+                        self.songTableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+                        self.progressHUD.detailsLabel.text = "Done!"
+                        self.delay(0.5, closure: {
+                            MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                        })
+                    }
+                    
+                }
             }
             
-            self.songTableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
-            
-            api.getLyrics(lyrics_id) { (lyrics) in
-                print(lyrics)
-                
-                print("Naughty: \(api.isNaughty(lyrics))")
-                api.playSong(results[0]["track"]["track_spotify_id"].string!);
-                
-            }
         }
         return true
     }
     
+    @IBAction func cleanSwitchChanged(sender: AnyObject) {
+        if self.cleanOnlySwitch.on {
+            self.activeDictionary = self.songDictioniariesClean
+        }else{
+            self.activeDictionary = self.songDictioniariesAll
+        }
+        self.songTableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+        
+    }
     func textFieldDidBeginEditing(textField: UITextField) {
         textField.layoutIfNeeded()
         UIView.animateWithDuration(0.6) {
@@ -104,13 +151,14 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var songDictioniariesAll = [[String:AnyObject]]()
     var songDictioniariesClean = [[String:AnyObject]]()
+    var activeDictionary = [[String:AnyObject]]()
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songDictioniariesAll.count
+        return activeDictionary.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -127,8 +175,8 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         cell.songNumberLabel.text = "\(indexPath.row + 1)"
         
-        cell.songTitleLabel.text = songDictioniariesAll[indexPath.row]["songTitle"] as! String
-        cell.songArtistLabel.text = songDictioniariesAll[indexPath.row]["songArtist"] as! String
+        cell.songTitleLabel.text = activeDictionary[indexPath.row]["songTitle"] as! String
+        cell.songArtistLabel.text = activeDictionary[indexPath.row]["songArtist"] as! String
         let backgroundSelected = UIView(frame: CGRectMake(0,0, cell.frame.width, 80))
         backgroundSelected.backgroundColor = UIColor(red: 0.980, green: 0.867, blue: 0.553, alpha: 1.00)
         cell.selectedBackgroundView = backgroundSelected
@@ -141,9 +189,19 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
             self.songPlayerBottomConstraint.constant = 0
             self.view.layoutIfNeeded()
         }
-        
+        self.songTitleLabel.text = activeDictionary[indexPath.row]["songTitle"] as! String
+        self.songArtistLabel.text = activeDictionary[indexPath.row]["songArtist"] as! String
     }
     
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
     
     /*
      // MARK: - Navigation
