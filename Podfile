@@ -7,4 +7,5 @@ target 'Mosie' do
     pod 'SwiftyJSON'
     pod 'MBProgressHUD', '~> 1.0.0'
     pod "youtube-ios-player-helper", "~> 0.1.4"
+    pod "YoutubeEngine", :git => "https://github.com/Igor-Palaguta/YoutubeEngine.git"
 end

@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import YoutubeEngine
 
 class RootVideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let engine = Engine(key: "AIzaSyCgwWIve2NhQOb5IHMdXxDaRHOnDrLdrLg")
+        let request = Search(.Term("VEVO", [.Video: [.Statistics, .ContentDetails], .Channel: [.Statistics]]))
+        engine.search(request)
+            .startWithNext {
+                page in
+                let formattedItems = page.items.enumerate().map { "[\($0)] = \($1)" }
+                print("VEVO:\n\(formattedItems.joinWithSeparator("\n"))")
+        }
 
         // Do any additional setup after loading the view.
     }
