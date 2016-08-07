@@ -21,9 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarHidden = true
         // Override point for customization after application launch.
 
-//        APIMagic().searchSpotify("Death of a Bachelor") { (results) in
-//            print(results)
-//        }
+        APIMagic().searchSpotify("Death of a Bachelor") { (results) in
+            print(results)
+            APIMagic().playSong(results[0]["track"]["track_spotify_id"].string!);
+        }
 //        let loginURL = SPTAuth.defaultInstance().loginURL;
 //        delay(0.1) {
 //            application.openURL(loginURL)
