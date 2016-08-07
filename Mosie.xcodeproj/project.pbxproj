@@ -47,6 +47,7 @@
 		BBB369FB1D56A7E7008D43AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */; };
 		BBD9E82D1D56DBCA008023A2 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9E82C1D56DBCA008023A2 /* VideoTableViewCell.swift */; };
 		BBD9E8351D571112008023A2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9E8341D571112008023A2 /* SwiftyJSON.swift */; };
+		BBD9E8371D5734A8008023A2 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9E8361D5734A8008023A2 /* VideoPlayerViewController.swift */; };
 		C0B07F9E6B8255065B674FEF /* Pods_Mosie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6AD9CEEA5D7CC12554E9DC /* Pods_Mosie.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,7 @@
 		BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BBD9E82C1D56DBCA008023A2 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		BBD9E8341D571112008023A2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		BBD9E8361D5734A8008023A2 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6540181D567B4200AF80E8 /* VideoStoryboard.storyboard */,
+				BBD9E8361D5734A8008023A2 /* VideoPlayerViewController.swift */,
 				BBD9E82C1D56DBCA008023A2 /* VideoTableViewCell.swift */,
 				BBB369F11D569D05008D43AE /* MoodCollectionViewCell.swift */,
 				BBB369EF1D569C45008D43AE /* MoodViewController.swift */,
@@ -375,7 +378,6 @@
 				TargetAttributes = {
 					BB653FE11D56787E00AF80E8 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9XWYL3K4YT;
 					};
 					BB653FF81D56787E00AF80E8 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -503,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6540171D567AE100AF80E8 /* MainSideViewController.swift in Sources */,
+				BBD9E8371D5734A8008023A2 /* VideoPlayerViewController.swift in Sources */,
 				BBB369F21D569D05008D43AE /* MoodCollectionViewCell.swift in Sources */,
 				BBB369F01D569C45008D43AE /* MoodViewController.swift in Sources */,
 				8B9D83DE1D56AC9F00DB01EE /* APIMagic.swift in Sources */,

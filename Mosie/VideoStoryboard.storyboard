@@ -197,6 +197,53 @@
             </objects>
             <point key="canvasLocation" x="-20" y="269"/>
         </scene>
+        <!--Video Player View Controller-->
+        <scene sceneID="gws-3u-Tix">
+            <objects>
+                <viewController storyboardIdentifier="VideoPlayVC" id="8aO-ep-XK0" customClass="VideoPlayerViewController" customModule="Mosie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Eg-TM-TPS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tqi-dD-wJx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZXL-Rc-NBP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jye-Y6-A0b">
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6y-Q2-u3V">
+                                        <rect key="frame" x="270" y="20" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="c6y-Q2-u3V" secondAttribute="height" multiplier="1:1" id="A0s-Z0-cmr"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="play"/>
+                                        <connections>
+                                            <action selector="videoPlayPauseClicked:" destination="8aO-ep-XK0" eventType="touchUpInside" id="UNy-jd-twH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.52156862745098043" green="0.29019607843137252" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="c6y-Q2-u3V" firstAttribute="centerX" secondItem="jye-Y6-A0b" secondAttribute="centerX" id="6cE-EU-wmb"/>
+                                    <constraint firstAttribute="height" constant="100" id="Nqm-Yt-qjD"/>
+                                    <constraint firstItem="c6y-Q2-u3V" firstAttribute="height" secondItem="jye-Y6-A0b" secondAttribute="height" multiplier="0.6" id="XHA-Ra-ikc"/>
+                                    <constraint firstItem="c6y-Q2-u3V" firstAttribute="centerY" secondItem="jye-Y6-A0b" secondAttribute="centerY" id="aq6-gt-4mB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jye-Y6-A0b" firstAttribute="centerX" secondItem="ZXL-Rc-NBP" secondAttribute="centerX" id="4Kq-jp-aXy"/>
+                            <constraint firstItem="jye-Y6-A0b" firstAttribute="width" secondItem="ZXL-Rc-NBP" secondAttribute="width" id="Yq1-Ii-9t7"/>
+                            <constraint firstItem="Tqi-dD-wJx" firstAttribute="top" secondItem="jye-Y6-A0b" secondAttribute="bottom" id="hMO-cQ-IAq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMx-cb-jBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="71"/>
+        </scene>
         <!--Mood View Controller-->
         <scene sceneID="c83-cr-p3L">
             <objects>
@@ -276,12 +323,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeE-vR-UnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="238"/>
+            <point key="canvasLocation" x="64" y="1199"/>
         </scene>
     </scenes>
     <resources>
         <image name="MosieLogo" width="942" height="294"/>
         <image name="happy" width="1152" height="618"/>
+        <image name="play" width="100" height="100"/>
         <image name="search" width="100" height="100"/>
     </resources>
 </document>

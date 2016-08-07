@@ -11,7 +11,7 @@ import YoutubeEngine
 import Alamofire
 import SDWebImage
 
-class RootVideoViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate {
+class RootVideoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var videoTableView: UITableView!
     
@@ -23,6 +23,7 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITextFi
         super.viewDidLoad()
         videoTableView.backgroundColor = nil
         videoTableView.dataSource = self
+        videoTableView.delegate = self
         videoTableView.separatorStyle = .None
         self.view.backgroundColor = UIColor(rgba: "#F5C3230A")
         videoSearchTextField.delegate = self
@@ -52,9 +53,7 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITextFi
 //                print(json["items"])
                 self.videoData = [[String:AnyObject]](count:json["items"].array!.count, repeatedValue:[String:AnyObject]())
                 for itemNum in 0..<json["items"].array!.count{
-//                    print(videoDictionary)
                     let videoDictionary = json["items"][itemNum].dictionary!
-                    print("Title \(videoDictionary["snippet"]!["title"].string!)")
                     var storeDictionary = [String:AnyObject]()
                     storeDictionary["title"] = videoDictionary["snippet"]!["title"].string!
                     storeDictionary["channel"] = videoDictionary["snippet"]!["channelTitle"].string!
@@ -142,6 +141,14 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITextFi
         }
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let playVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("VideoPlayVC")
+        
+        self.navigationController?.pushViewController(playVC, animated: true)
+        
+        
     }
 
     /*
