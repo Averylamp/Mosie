@@ -21,6 +21,8 @@
 		BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */; };
 		BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */; };
 		BB674FBB1D56AC76000C9A35 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB674FBA1D56AC76000C9A35 /* SongTableViewCell.swift */; };
+		BB674FBD1D56C6E0000C9A35 /* PlaybackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB674FBC1D56C6E0000C9A35 /* PlaybackBarView.swift */; };
+		BB674FBF1D56C9AB000C9A35 /* SongControlBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB674FBE1D56C9AB000C9A35 /* SongControlBarViewController.swift */; };
 		BB7DDEB11D56822500575A1F /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */; };
 		BBB369D11D568C5E008D43AE /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */; };
 		BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369D21D568C6E008D43AE /* SettingsViewController.swift */; };
@@ -41,6 +43,7 @@
 		BBB369F41D569FAC008D43AE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369F31D569FAC008D43AE /* UIColorExtension.swift */; };
 		BBB369F91D56A7D9008D43AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB369F81D56A7D9008D43AE /* AVFoundation.framework */; };
 		BBB369FB1D56A7E7008D43AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */; };
+		C0B07F9E6B8255065B674FEF /* Pods_Mosie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6AD9CEEA5D7CC12554E9DC /* Pods_Mosie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		0A166084560381F32D30D388 /* Pods-Mosie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mosie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mosie/Pods-Mosie.release.xcconfig"; sourceTree = "<group>"; };
+		0A6AD9CEEA5D7CC12554E9DC /* Pods_Mosie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mosie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		196996E2EAB79A9078E4D530 /* Pods-Mosie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mosie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mosie/Pods-Mosie.debug.xcconfig"; sourceTree = "<group>"; };
 		5C5FEBE3C9F20C65051667D9 /* Pods_Mosie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mosie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB653FE21D56787E00AF80E8 /* Mosie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mosie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +87,8 @@
 		BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVideoViewController.swift; sourceTree = "<group>"; };
 		BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAudioViewController.swift; sourceTree = "<group>"; };
 		BB674FBA1D56AC76000C9A35 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		BB674FBC1D56C6E0000C9A35 /* PlaybackBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackBarView.swift; sourceTree = "<group>"; };
+		BB674FBE1D56C9AB000C9A35 /* SongControlBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongControlBarViewController.swift; sourceTree = "<group>"; };
 		BB7DDEB01D56822500575A1F /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		BBB369D21D568C6E008D43AE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 				BBB369FB1D56A7E7008D43AE /* SystemConfiguration.framework in Frameworks */,
 				BBB369F91D56A7D9008D43AE /* AVFoundation.framework in Frameworks */,
 				6E3B6ED101F42E0546685277 /* Pods_Mosie.framework in Frameworks */,
+				C0B07F9E6B8255065B674FEF /* Pods_Mosie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +232,10 @@
 			isa = PBXGroup;
 			children = (
 				BB65401A1D567B4A00AF80E8 /* AudioStoryboard.storyboard */,
+				BB674FBE1D56C9AB000C9A35 /* SongControlBarViewController.swift */,
 				BB674FBA1D56AC76000C9A35 /* SongTableViewCell.swift */,
 				BB6540201D567C3500AF80E8 /* RootAudioViewController.swift */,
+				BB674FBC1D56C6E0000C9A35 /* PlaybackBarView.swift */,
 			);
 			name = "Audio Section";
 			sourceTree = "<group>";
@@ -273,6 +282,7 @@
 			children = (
 				BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */,
 				BBB369F81D56A7D9008D43AE /* AVFoundation.framework */,
+				0A6AD9CEEA5D7CC12554E9DC /* Pods_Mosie.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -479,8 +489,10 @@
 				BBB369F01D569C45008D43AE /* MoodViewController.swift in Sources */,
 				BB674FBB1D56AC76000C9A35 /* SongTableViewCell.swift in Sources */,
 				BB7DDEB11D56822500575A1F /* MainNavigationViewController.swift in Sources */,
+				BB674FBF1D56C9AB000C9A35 /* SongControlBarViewController.swift in Sources */,
 				BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */,
 				BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */,
+				BB674FBD1D56C6E0000C9A35 /* PlaybackBarView.swift in Sources */,
 				BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */,
 				BBB369F41D569FAC008D43AE /* UIColorExtension.swift in Sources */,
 				BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */,

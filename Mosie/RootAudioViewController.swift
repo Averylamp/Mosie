@@ -8,17 +8,29 @@
 
 import UIKit
 
-class RootAudioViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class RootAudioViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate  {
 
     @IBOutlet weak var songTableView: UITableView!
     
+    @IBOutlet weak var songSearchBar: UISearchBar!
+    
+    @IBOutlet weak var searchBarHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var searchBarWidthConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var searchBarLargeWidthConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor(red: 0.620, green: 0.353, blue: 0.545, alpha: 1.00)
         songTableView.separatorStyle = .None
         songTableView.dataSource = self
         songTableView.delegate   = self
+        songTableView.backgroundColor = nil
+        
+        self.songSearchBar.delegate = self
+        
         
         // Do any additional setup after loading the view.
     }
@@ -28,8 +40,37 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - Search Bar Delegate
     
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
     
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        print("Searching for  \(searchBar.text!)")
+        
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.layoutIfNeeded()
+//        
+//        searchBarHeightConstraint.constant = 50
+//        searchBarWidthConstraint.active = false
+//        searchBarLargeWidthConstraint.active = true
+//        UIView.animateWithDuration(1.0) { 
+//            searchBar.layoutIfNeeded()
+//        }
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        
+//        searchBarHeightConstraint.constant = 50
+//        searchBarWidthConstraint.active = true
+//        searchBarLargeWidthConstraint.active = false
+//        UIView.animateWithDuration(1.0) {
+//            searchBar.layoutIfNeeded()
+//        }
+    }
     //MARK: - Table View Delegate/Data Source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -42,11 +83,14 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.songTableView.dequeueReusableCellWithIdentifier("SongCell") as! SongTableViewCell
-        
+        cell.backgroundColor = nil
+        cell.backgroundView = nil
         cell.contentView.backgroundColor = nil
         if indexPath.row % 2 == 0{
+//            cell.contentView.backgroundColor = UIColor(white: 1.0, alpha: 0.4)
             cell.contentView.backgroundColor = UIColor.whiteColor()
         }else{
+//            cell.contentView.backgroundColor = UIColor(white: 1.0, alpha: 0.8)
             cell.contentView.backgroundColor = UIColor(red: 0.941, green: 0.945, blue: 0.961, alpha: 1.00)
         }
         cell.songNumberLabel.text = "\(indexPath.row + 1)"

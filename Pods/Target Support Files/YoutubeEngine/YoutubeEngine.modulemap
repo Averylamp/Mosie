@@ -1,0 +1,6 @@
+framework module YoutubeEngine {
+  umbrella header "YoutubeEngine-umbrella.h"
+
+  export *
+  module * { export * }
+}
