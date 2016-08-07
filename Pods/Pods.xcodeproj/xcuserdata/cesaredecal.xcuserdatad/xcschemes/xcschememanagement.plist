@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>NXOAuth2Client.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>Pods-Mosie.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -67,7 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3C5B5FA57D4ED7247784562F3D92E0E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41DEF01DF1CF67DC6513D0B3EB77C1CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5A393FF4BC4FD41C7A831669EC2C6475</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B6A53B2D2E7BE94735532B97DC00D37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E2060A6AE6C46CDA0BA36F24FF908FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +122,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>81800631731E93DE1794568B8B866A68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8A2309D9B74FA5F26F1DC2E1835B7145</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>92274141B207CDB035417ABA066C065B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0BBC927C59C8FE8A483D2E14770260C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,6 +177,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C2037D8E8B74CEC3F47C093380E2BECE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CF6B69FAC1EB0F9ABE6E64C0ED7466E3</key>
 		<dict>
 			<key>primary</key>
@@ -153,6 +193,11 @@
 			<true/>
 		</dict>
 		<key>E32E0DBDBCE226C0BE2C343A1184979F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E48B2587C3EB50F13DF1A6D5A4B39B02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
