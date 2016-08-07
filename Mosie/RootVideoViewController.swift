@@ -20,7 +20,7 @@ class RootVideoViewController: UIViewController {
             .startWithNext {
                 page in
                 let formattedItems = page.items.enumerate().map { "[\($0)] = \($1)" }
-                print("VEVO:\n\(formattedItems.joinWithSeparator("\n"))")
+               // print("VEVO:\n\(formattedItems.joinWithSeparator("\n"))")
         }
 
         // Do any additional setup after loading the view.
