@@ -29,6 +29,15 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
         self.view.backgroundColor = UIColor(rgba: "#F5C3230A")
         videoSearchTextField.delegate = self
         
+        let engine = Engine(key: "AIzaSyCgwWIve2NhQOb5IHMdXxDaRHOnDrLdrLg")
+        let request = Search(.Term("VEVO", [.Video: [.Statistics, .ContentDetails], .Channel: [.Statistics]]))
+        engine.search(request)
+            .startWithNext {
+                page in
+                let formattedItems = page.items.enumerate().map { "[\($0)] = \($1)" }
+               // print("VEVO:\n\(formattedItems.joinWithSeparator("\n"))")
+        }
+
 //        youtubeEngine = Engine(key: "AIzaSyCgwWIve2NhQOb5IHMdXxDaRHOnDrLdrLg")
 //
 //

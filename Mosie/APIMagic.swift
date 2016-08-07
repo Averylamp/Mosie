@@ -9,7 +9,14 @@
 import Alamofire
 
 class APIMagic {
-    func playSpotify() {
+    func searchSpotify(query: String, closure: (results: Array<JSON>) -> Void) {
+        Alamofire.request(.GET, "https://api.musixmatch.com/ws/1.1/track.search", parameters: ["apikey": "63b3335a7fe1aa6d6084fdbf53671583", "f_has_lyrics":"1", "q": query], headers: ["Accept" : "application/json"])
+            .response { request, response, data, error in
+                
+                let json = JSON(data: data!)
+                closure(results: json["message"]["body"]["track_list"].array! as Array<JSON>)
+
+        }
         
+        }
     }
-}

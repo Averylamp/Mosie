@@ -8,31 +8,96 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>BAHYouTubeOAuth-BAHYouTubeOAuth.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>BAHYouTubeOAuth.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>Pods-Mosie.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>YoutubeEngine.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>youtube-ios-player-helper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2CC59D331328171640C4415909434E56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A393FF4BC4FD41C7A831669EC2C6475</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5EDD361AADDAC84025AAE1B7740FA755</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>676028CC14BEA1CC00BE0CC947048BFC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6D2A893BDF34CAD1C8D29ED9FF94B203</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>75D0D388279656F14217EC90F36697B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +107,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8A2309D9B74FA5F26F1DC2E1835B7145</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92274141B207CDB035417ABA066C065B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1BF4F5693304E12846EFADAAD33A7F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7B51350645C7BF0C6738AC684C478C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B359BEAB3C80CF38E4466D22608405AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B56BDB9EAFCAAB2411C8A5FA19CB92C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +142,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BC84F7F761B5C66C0F0D26D8BC63B2A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF314B1658FE32A371887BB6F321594F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF6B69FAC1EB0F9ABE6E64C0ED7466E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E32E0DBDBCE226C0BE2C343A1184979F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2218161A74DD0259BD9E6951C4710E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

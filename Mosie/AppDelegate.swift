@@ -12,24 +12,17 @@ import NXOAuth2Client
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-    var session: SPTSession?
-    var player: SPTAudioStreamingController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+
         application.statusBarHidden = true
         // Override point for customization after application launch.
-        let instance = SPTAuth.defaultInstance()
-        instance.clientID = "56bf06f32ffe40e4ad1e414dca7f6f97"
-        instance.redirectURL = NSURL(string: "Mosie://returnafterlogin")
-        
-        instance.requestedScopes = [SPTAuthStreamingScope]
-       
-        
-        
+
+//        APIMagic().searchSpotify("Death of a Bachelor") { (results) in
+//            print(results)
+//        }
 //        let loginURL = SPTAuth.defaultInstance().loginURL;
 //        delay(0.1) {
 //            application.openURL(loginURL)
@@ -37,54 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
         
         return true
     }
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
-    }
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        let instance = SPTAuth.defaultInstance()
 
-        if(SPTAuth.defaultInstance().canHandleURL(url)) {
-            instance.handleAuthCallbackWithTriggeredAuthURL(url, callback: { (error, session) in
-                if (error != nil) {
-                    print("Auth error \(error)")
-                    return
-                }
-                self.loginUsingSession(session)
-            })
-            return true
-        }
-
-        return false
-    }
-    
-    
-    
-    func loginUsingSession(session: SPTSession) {
-        self.player = SPTAudioStreamingController.sharedInstance()
-        self.player?.delegate = self
-        do{
-        try self.player?.startWithClientId("56bf06f32ffe40e4ad1e414dca7f6f97")
-        }catch{
-            
-        }
-        self.player?.loginWithAccessToken(session.accessToken)
-    }
-    
-    func audioStreamingDidLogin(audioStreaming: SPTAudioStreamingController!) {
-        self.player?.playURI(NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp")) { (error) in
-            if (error != nil) {
-                print("failed to play \(error)")
-            }
-        }
-    }
-   
-    
-    func applicationWillResignActive(application: UIApplication) {
+        func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
@@ -143,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
             abort()
         }
-        
+
         return coordinator
     }()
 
@@ -172,4 +119,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
     }
 
 }
-
