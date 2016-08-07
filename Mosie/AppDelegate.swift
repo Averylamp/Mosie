@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //            }
 //        }
+
 //        let loginURL = SPTAuth.defaultInstance().loginURL;
 //        delay(0.1) {
 //            application.openURL(loginURL)
