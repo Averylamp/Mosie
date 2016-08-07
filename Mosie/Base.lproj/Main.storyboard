@@ -71,7 +71,7 @@
                                             <constraint firstAttribute="width" constant="50" id="Epc-mY-bqD"/>
                                             <constraint firstAttribute="width" secondItem="rKf-55-20E" secondAttribute="height" multiplier="1:1" id="wWT-Tf-YhL"/>
                                         </constraints>
-                                        <state key="normal" title="Audio" image="audioButton"/>
+                                        <state key="normal" title="Audio" image="moodButton"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Epc-mY-bqD"/>
@@ -191,6 +191,7 @@
     </scenes>
     <resources>
         <image name="audioButton" width="180" height="180"/>
+        <image name="moodButton" width="180" height="180"/>
         <image name="movieButton" width="180" height="180"/>
         <image name="settingsButton" width="180" height="180"/>
     </resources>
