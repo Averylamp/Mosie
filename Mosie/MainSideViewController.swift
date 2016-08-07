@@ -14,11 +14,13 @@ class MainSideViewController: UIViewController {
         static let AudioSelected = "AudioSelected"
         static let VideoSelected = "VideoSelected"
         static let SettingsSelected = "SettingsSelected"
+        static let MoodSelected = "MoodSelected"
     }
     
     @IBOutlet weak var videoButton: UIButton!
     @IBOutlet weak var audioButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var moodButton: UIButton!
     
     @IBOutlet var tabMenuButtons: [UIButton]!
     
@@ -54,6 +56,12 @@ class MainSideViewController: UIViewController {
         
     }
     
+    @IBAction func moodTabButtonClicked(sender: AnyObject) {
+        postNotification(3)
+        tabMenuButtons.forEach { $0.alpha = 1.0 }
+        settingsButton.alpha = 0.6
+        
+    }
     
     
     func postNotification(index: Int){
@@ -65,6 +73,8 @@ class MainSideViewController: UIViewController {
             notificationCenter.postNotification(NSNotification(name: Navigation.VideoSelected, object: self))
         case 2:
             notificationCenter.postNotification(NSNotification(name: Navigation.SettingsSelected, object: self))
+        case 3:
+            notificationCenter.postNotification(NSNotification(name: Navigation.MoodSelected, object: self))
         default:
             break
         }
