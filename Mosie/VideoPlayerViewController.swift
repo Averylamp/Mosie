@@ -12,6 +12,9 @@ import youtube_ios_player_helper
 
 class VideoPlayerViewController: UIViewController, YTPlayerViewDelegate {
 
+    var videoID = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +29,7 @@ class VideoPlayerViewController: UIViewController, YTPlayerViewDelegate {
         
         playerView.setPlaybackQuality(.Small)
         playerView.delegate = self
-        self.playerView.loadWithVideoId("UXENyhFMrxk")
+        self.playerView.loadWithVideoId(videoID)
         print("Player view loaded")
         // Do any additional setup after loading the view.
     }

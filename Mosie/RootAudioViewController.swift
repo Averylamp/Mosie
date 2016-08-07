@@ -200,7 +200,7 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         self.songTitleLabel.text = activeDictionary[indexPath.row]["songTitle"] as! String
         self.songArtistLabel.text = activeDictionary[indexPath.row]["songArtist"] as! String
-        APIMagic().playSong(self.activeDictionary[indexPath.row]["spotifyURI"] as! String)
+        APIMagic().playSong(self.activeDictionary[indexPath.row]["spotifyURI"] as! String){}
     }
     
     

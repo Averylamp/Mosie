@@ -10,6 +10,7 @@ import UIKit
 import YoutubeEngine
 import Alamofire
 import SDWebImage
+import MBProgressHUD
 
 class RootVideoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
@@ -37,18 +38,22 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
                 let formattedItems = page.items.enumerate().map { "[\($0)] = \($1)" }
                // print("VEVO:\n\(formattedItems.joinWithSeparator("\n"))")
         }
-
-//        youtubeEngine = Engine(key: "AIzaSyCgwWIve2NhQOb5IHMdXxDaRHOnDrLdrLg")
-//
-//
-//        let youtubeAuth = BAHYouTubeOAuth()
-//        youtubeAuth.authenticateWithYouTubeUsingYouTubeClientID("486857137228-u7067h82gkgfcjl6pnc8bc9a7l4s888v.apps.googleusercontent.com", youTubeClientSecret: "", responseType: <#T##String!#>, scope: <#T##String!#>, state: <#T##String!#>, appURLCallBack: <#T##String!#>, accessType: <#T##String!#>, viewController: <#T##AnyObject!#>, <#T##completelion: ((Bool, String!, String!) -> Void)!##((Bool, String!, String!) -> Void)!##(Bool, String!, String!) -> Void#>)
-//        
-        // Do any additional setup after loading the view.
+    
     }
     
+    var progressHUD = MBProgressHUD()
     
     func searchForVideo(searchTerm: String){
+        progressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        progressHUD.mode = .Indeterminate
+        progressHUD.label.text = "Searching for \(searchTerm)"
+        progressHUD.color = UIColor(white: 1.0, alpha: 1.0)
+        progressHUD.label.textColor = UIColor.darkGrayColor()
+        progressHUD.detailsLabel.text = ""
+        progressHUD.detailsLabel.textColor = UIColor.darkGrayColor()
+        progressHUD.activityIndicatorColor = UIColor.darkGrayColor()
+        progressHUD.dimBackground = true
+        
         let query = searchTerm.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
         let queryURL = "https://www.googleapis.com/youtube/v3/search?part=id%2Csnippet&maxResults=20&q=\(query)&type=video&videoCaption=closedCaption&key=AIzaSyDvCC8cOyjDpQsfXoNKqgpgPUaMyaSq6ZQ"
         print(queryURL)
@@ -61,6 +66,7 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
                 let json = JSON(data:response.data!)
 //                print("JSON: \(json)")
 //                print(json["items"])
+                self.progressHUD.detailsLabel.text = "\(json["items"].array!.count) videos found"
                 self.videoData = [[String:AnyObject]](count:json["items"].array!.count, repeatedValue:[String:AnyObject]())
                 for itemNum in 0..<json["items"].array!.count{
                     let videoDictionary = json["items"][itemNum].dictionary!
@@ -73,6 +79,9 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
                 }
                 
                 self.videoTableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+                self.delay(1.0, closure: {
+                    MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                })
             }
 
         }
@@ -156,11 +165,22 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let playVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("VideoPlayVC")
-        
+        let playVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("VideoPlayVC") as! VideoPlayerViewController
+        playVC.videoID = videoData[indexPath.row]["id"] as! String
+        print("Video ID - \(playVC.videoID)")
         self.navigationController?.pushViewController(playVC, animated: true)
         
         
+    }
+    
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
 
     /*
