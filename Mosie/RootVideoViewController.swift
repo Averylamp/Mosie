@@ -15,7 +15,7 @@ class RootVideoViewController: UIViewController {
         super.viewDidLoad()
         
         let engine = Engine(key: "AIzaSyCgwWIve2NhQOb5IHMdXxDaRHOnDrLdrLg")
-        let request = Search(.Term("VEVO", [.Video: [.Statistics, .ContentDetails], .Channel: [.Statistics]]))
+        let request = Search(.Term("VEVO", [.Video: [.Statistics, .ContentDetails]]))
         engine.search(request)
             .startWithNext {
                 page in

@@ -10,6 +10,14 @@ import UIKit
 
 class VideoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var videoImageThumbnail: UIImageView!
+    
+    @IBOutlet weak var videoTitleLabel: UILabel!
+    @IBOutlet weak var videoChannelLabel: UILabel!
+    @IBOutlet weak var videoViewsCountLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

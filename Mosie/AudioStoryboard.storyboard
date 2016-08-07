@@ -33,12 +33,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MosieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qlR-oV-DVE">
-                                <rect key="frame" x="120" y="30" width="360" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="E93-xR-gut"/>
-                                </constraints>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-Gh-zOh">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,14 +53,14 @@
                                                     <color key="textColor" red="0.0" green="0.792156862745098" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Levels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1P-aw-79v">
-                                                    <rect key="frame" x="116" y="18" width="376" height="31.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Levels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1P-aw-79v">
+                                                    <rect key="frame" x="116" y="18" width="376" height="30.5"/>
                                                     <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="26"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avicii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IL-Hp-e6q">
-                                                    <rect key="frame" x="116" y="50" width="376" height="31.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Avicii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IL-Hp-e6q">
+                                                    <rect key="frame" x="116" y="51" width="376" height="30.5"/>
                                                     <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="19"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -110,6 +104,12 @@
                                     <segue destination="e2W-MF-fcw" kind="embed" id="VCP-gp-DrN"/>
                                 </connections>
                             </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MosieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qlR-oV-DVE">
+                                <rect key="frame" x="120" y="30" width="360" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="E93-xR-gut"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -268,7 +268,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MosieLogo" width="400" height="200"/>
+        <image name="MosieLogo" width="942" height="294"/>
         <image name="fast_forward" width="100" height="100"/>
         <image name="pause" width="100" height="100"/>
         <image name="rewind" width="100" height="100"/>
