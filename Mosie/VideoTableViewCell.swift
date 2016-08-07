@@ -16,6 +16,7 @@ class VideoTableViewCell: UITableViewCell {
     @IBOutlet weak var videoChannelLabel: UILabel!
     @IBOutlet weak var videoViewsCountLabel: UILabel!
     
+    @IBOutlet weak var containerView: UIView!
     
     
     override func awakeFromNib() {

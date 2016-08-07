@@ -27,10 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
         
         instance.requestedScopes = [SPTAuthStreamingScope]
         
-        let loginURL = SPTAuth.defaultInstance().loginURL;
-        delay(0.1) {
-            application.openURL(loginURL)
-        }
+//        let loginURL = SPTAuth.defaultInstance().loginURL;
+//        delay(0.1) {
+//            application.openURL(loginURL)
+//        }
 
         return true
     }

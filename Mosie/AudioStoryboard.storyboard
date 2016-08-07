@@ -105,7 +105,7 @@
                                 </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MosieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qlR-oV-DVE">
-                                <rect key="frame" x="120" y="30" width="360" height="100"/>
+                                <rect key="frame" x="180" y="30" width="240" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="E93-xR-gut"/>
                                 </constraints>
@@ -114,7 +114,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b1Z-Gh-zOh" firstAttribute="centerY" secondItem="Qaa-pn-qEo" secondAttribute="centerY" id="1Nd-SH-6xe"/>
-                            <constraint firstItem="qlR-oV-DVE" firstAttribute="width" secondItem="Qaa-pn-qEo" secondAttribute="width" multiplier="0.6" id="A5q-KC-isd"/>
+                            <constraint firstItem="qlR-oV-DVE" firstAttribute="width" secondItem="Qaa-pn-qEo" secondAttribute="width" multiplier="0.4" id="A5q-KC-isd"/>
                             <constraint firstItem="cuh-Gg-Q4d" firstAttribute="centerX" secondItem="Qaa-pn-qEo" secondAttribute="centerX" id="KXV-GN-Mbn"/>
                             <constraint firstItem="nVL-OI-ehW" firstAttribute="top" secondItem="cuh-Gg-Q4d" secondAttribute="bottom" id="MSe-el-C3a"/>
                             <constraint firstItem="b1Z-Gh-zOh" firstAttribute="centerX" secondItem="Qaa-pn-qEo" secondAttribute="centerX" id="NWv-W6-63m"/>

@@ -1,9 +1,13 @@
 PODS:
   - Alamofire (3.4.1)
+  - BAHYouTubeOAuth (0.1.1)
   - MBProgressHUD (1.0.0)
   - ReactiveCocoa (4.2.1):
     - Result (~> 2.0)
   - Result (2.1.3)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
   - SwiftyJSON (2.3.2)
   - youtube-ios-player-helper (0.1.6)
   - YoutubeEngine (0.1.0):
@@ -13,8 +17,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - BAHYouTubeOAuth
   - MBProgressHUD (~> 1.0.0)
-  - SwiftyJSON
+  - SDWebImage (~> 3.8)
   - youtube-ios-player-helper (~> 0.1.4)
   - YoutubeEngine (from `https://github.com/Igor-Palaguta/YoutubeEngine.git`)
 
@@ -29,13 +34,15 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  BAHYouTubeOAuth: 5fcf216ee271d006320aa857a2e0a93fa44e41a3
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ReactiveCocoa: 5a42745f11ea236f405bb9ce5e97c5e3b23562dd
   Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
   YoutubeEngine: ebdcf5d376d0fba2dcfbc50456bfcd720bc776ed
 
-PODFILE CHECKSUM: fbfb05d777dba35fd6fa7dc800e6521dfb3ac306
+PODFILE CHECKSUM: 4545b6e55b1138ab24194ae8d0b7b5a8299af382
 
 COCOAPODS: 1.0.1
