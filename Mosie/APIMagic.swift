@@ -37,7 +37,7 @@ class APIMagic {
                 }
         }
     }
-    func playSong(spotifyId: String) {
+    func playSong(spotifyId: String, closure: () -> Void) {
         Alamofire.request(.POST, "http://" + SPEAKER_IP + ":8090/select", parameters: [
             "ContentItem": [
                 "source": "SPOTIFY",
@@ -49,9 +49,10 @@ class APIMagic {
                 if ((error) != nil) {
                     print("\(error)")
                 }
+                closure()
         }
     }
-    func playPlaylist(spotifyURI: String) {
+    func playPlaylist(spotifyURI: String, closure: () -> Void) {
         Alamofire.request(.POST, "http://" + SPEAKER_IP + ":8090/select", parameters: [
             "ContentItem": [
                 "source": "SPOTIFY",
@@ -63,6 +64,7 @@ class APIMagic {
                 if ((error) != nil) {
                     print("\(error)")
                 }
+                closure()
         }
     }
     
@@ -87,7 +89,7 @@ class APIMagic {
             return nil;
         }
     }
-    func pause() {
+    func pause(closure: () -> Void) {
         Alamofire.request(.POST, "http://" + SPEAKER_IP + ":8090/volume", parameters: [
             "volume": 0
             ], headers: ["Accept" : "application/json"], encoding: .JSON)
@@ -95,9 +97,10 @@ class APIMagic {
                 if ((error) != nil) {
                     print("\(error)")
                 }
+                closure()
         }
     }
-    func play() {
+    func play(closure: () -> Void) {
         Alamofire.request(.POST, "http://" + SPEAKER_IP + ":8090/volume", parameters: [
             "volume": 40
             ], headers: ["Accept" : "application/json"], encoding: .JSON)
@@ -105,6 +108,7 @@ class APIMagic {
                 if ((error) != nil) {
                     print("\(error)")
                 }
+                closure()
         }
     }
 }
