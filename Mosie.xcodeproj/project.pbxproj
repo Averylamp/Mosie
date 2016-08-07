@@ -375,6 +375,7 @@
 				TargetAttributes = {
 					BB653FE11D56787E00AF80E8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9XWYL3K4YT;
 					};
 					BB653FF81D56787E00AF80E8 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -662,6 +663,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -682,6 +685,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MemeMasters.Mosie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mosie-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -693,6 +697,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -713,6 +719,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MemeMasters.Mosie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mosie-Bridging-Header.h";
 			};
 			name = Release;

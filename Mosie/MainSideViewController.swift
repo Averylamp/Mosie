@@ -59,7 +59,7 @@ class MainSideViewController: UIViewController {
     @IBAction func moodTabButtonClicked(sender: AnyObject) {
         postNotification(3)
         tabMenuButtons.forEach { $0.alpha = 1.0 }
-        settingsButton.alpha = 0.6
+        moodButton.alpha = 0.6
         
     }
     

@@ -48,14 +48,14 @@ class MainNavigationViewController: UINavigationController {
         })
         settingsSelectedObserver = notificationCenter.addObserverForName(MainSideViewController.Navigation.SettingsSelected, object: nil, queue: nil, usingBlock: { (notification) in
             
-            let videoVC = UIStoryboard(name: "SettingsStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("SettingsVC")
+            let settingsVC = UIStoryboard(name: "SettingsStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("SettingsVC")
             
-            self.setViewControllers([videoVC], animated: true)
+            self.setViewControllers([settingsVC], animated: true)
         })
         moodSelectedObserver = notificationCenter.addObserverForName(MainSideViewController.Navigation.MoodSelected, object: nil, queue: nil, usingBlock: { (notification) in
             
-let videoVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MoodVC")
-            self.setViewControllers([videoVC], animated: true)
+            let moodVC = UIStoryboard(name: "VideoStoryboard", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MoodVC")
+            self.setViewControllers([moodVC], animated: true)
         })
     }
     

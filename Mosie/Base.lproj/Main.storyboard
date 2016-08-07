@@ -148,6 +148,7 @@
                         <outletCollection property="tabMenuButtons" destination="fc2-Oq-QhP" collectionClass="NSMutableArray" id="UAg-2i-Qbl"/>
                         <outletCollection property="tabMenuButtons" destination="4pE-Bg-2F3" collectionClass="NSMutableArray" id="G0u-po-eOZ"/>
                         <outletCollection property="tabMenuButtons" destination="PZC-TS-8M6" collectionClass="NSMutableArray" id="Wla-3L-1U7"/>
+                        <outletCollection property="tabMenuButtons" destination="rKf-55-20E" collectionClass="NSMutableArray" id="yLJ-kc-Gqj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
