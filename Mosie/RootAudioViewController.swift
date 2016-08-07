@@ -138,6 +138,14 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
 
+    
+    func playSpotifyOnSpeaker(uri:String, title:String, artist:String){
+        
+        
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

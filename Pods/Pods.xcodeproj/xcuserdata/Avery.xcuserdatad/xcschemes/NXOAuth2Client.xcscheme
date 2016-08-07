@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A1BF4F5693304E12846EFADAAD33A7F2'
-               BlueprintName = 'BAHYouTubeOAuth'
+               BlueprintIdentifier = '5E2060A6AE6C46CDA0BA36F24FF908FC'
+               BlueprintName = 'NXOAuth2Client'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'BAHYouTubeOAuth.framework'>
+               BuildableName = 'NXOAuth2Client.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

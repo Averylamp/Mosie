@@ -33,8 +33,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MosieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qlR-oV-DVE">
+                                <rect key="frame" x="180" y="30" width="240" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="E93-xR-gut"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Qrv-S7-peq">
+                                <rect key="frame" x="0.0" y="140" width="600" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Vb-xo-oth"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuh-Gg-Q4d">
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1CY-Lp-uq4"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="e2W-MF-fcw" kind="embed" id="VCP-gp-DrN"/>
+                                </connections>
+                            </containerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-Gh-zOh">
-                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="180" width="600" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongCell" id="AOS-Gp-vhN" customClass="SongTableViewCell" customModule="Mosie" customModuleProvider="target">
@@ -88,28 +110,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Qrv-S7-peq">
-                                <rect key="frame" x="120" y="140" width="360" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4Vb-xo-oth"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuh-Gg-Q4d">
-                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1CY-Lp-uq4"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="e2W-MF-fcw" kind="embed" id="VCP-gp-DrN"/>
-                                </connections>
-                            </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MosieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qlR-oV-DVE">
-                                <rect key="frame" x="180" y="30" width="240" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="E93-xR-gut"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -120,12 +120,13 @@
                             <constraint firstItem="b1Z-Gh-zOh" firstAttribute="centerX" secondItem="Qaa-pn-qEo" secondAttribute="centerX" id="NWv-W6-63m"/>
                             <constraint firstItem="Qrv-S7-peq" firstAttribute="centerX" secondItem="Qaa-pn-qEo" secondAttribute="centerX" id="NmB-cu-gde"/>
                             <constraint firstItem="b1Z-Gh-zOh" firstAttribute="height" secondItem="Qaa-pn-qEo" secondAttribute="height" constant="-300" id="PSU-Jf-T4f"/>
-                            <constraint firstItem="Qrv-S7-peq" firstAttribute="width" secondItem="Qaa-pn-qEo" secondAttribute="width" multiplier="0.6" id="SDD-93-k1c"/>
+                            <constraint firstItem="b1Z-Gh-zOh" firstAttribute="top" secondItem="Qrv-S7-peq" secondAttribute="bottom" id="PeB-1e-adx"/>
+                            <constraint firstItem="Qrv-S7-peq" firstAttribute="width" secondItem="Qaa-pn-qEo" secondAttribute="width" id="SDD-93-k1c"/>
                             <constraint firstItem="cuh-Gg-Q4d" firstAttribute="width" secondItem="Qaa-pn-qEo" secondAttribute="width" id="cpw-dq-d7I"/>
                             <constraint firstItem="Qrv-S7-peq" firstAttribute="width" secondItem="Qaa-pn-qEo" secondAttribute="width" multiplier="0.8" id="g2Y-Nl-AaU"/>
                             <constraint firstItem="b1Z-Gh-zOh" firstAttribute="width" secondItem="Qaa-pn-qEo" secondAttribute="width" id="hFf-D4-dzs"/>
                             <constraint firstItem="qlR-oV-DVE" firstAttribute="top" secondItem="0LX-0C-hNJ" secondAttribute="bottom" constant="10" id="iYJ-9P-Fzq"/>
-                            <constraint firstItem="nVL-OI-ehW" firstAttribute="top" secondItem="b1Z-Gh-zOh" secondAttribute="bottom" id="iqh-0n-Njc"/>
+                            <constraint firstItem="nVL-OI-ehW" firstAttribute="top" secondItem="b1Z-Gh-zOh" secondAttribute="bottom" constant="100" id="iqh-0n-Njc"/>
                             <constraint firstItem="Qrv-S7-peq" firstAttribute="top" secondItem="qlR-oV-DVE" secondAttribute="bottom" constant="10" id="mCh-hs-ZsU"/>
                             <constraint firstItem="qlR-oV-DVE" firstAttribute="centerX" secondItem="Qaa-pn-qEo" secondAttribute="centerX" id="yZE-bQ-vkj"/>
                         </constraints>
@@ -133,6 +134,7 @@
                             <mask key="constraints">
                                 <exclude reference="g2Y-Nl-AaU"/>
                                 <exclude reference="1Nd-SH-6xe"/>
+                                <exclude reference="PSU-Jf-T4f"/>
                             </mask>
                         </variation>
                     </view>
@@ -212,7 +214,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-Vg-qVs">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-Vg-qVs">
                                         <rect key="frame" x="250" y="17" width="330" height="3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="3" id="bUa-pH-zAo"/>

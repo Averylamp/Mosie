@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-
+import NXOAuth2Client
 
 
 @UIApplicationMain
@@ -27,12 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
         instance.redirectURL = NSURL(string: "Mosie://returnafterlogin")
         
         instance.requestedScopes = [SPTAuthStreamingScope]
+       
+        
         
 //        let loginURL = SPTAuth.defaultInstance().loginURL;
 //        delay(0.1) {
 //            application.openURL(loginURL)
 //        }
-
+        
         return true
     }
     func delay(delay:Double, closure:()->()) {
@@ -59,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
 
         return false
     }
+    
+    
     
     func loginUsingSession(session: SPTSession) {
         self.player = SPTAudioStreamingController.sharedInstance()

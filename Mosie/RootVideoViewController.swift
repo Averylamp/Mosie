@@ -18,6 +18,7 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var videoSearchTextField: UITextField!
     
     @IBOutlet weak var searchText: UILabel!
+    @IBOutlet weak var searchIcon: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +85,7 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
         UIView.animateWithDuration(0.6) {
             self.searchImage.alpha = 0.0
             self.searchText.alpha = 0.0
+            self.searchIcon.alpha = 0.0
         }
     }
     
@@ -93,6 +95,7 @@ class RootVideoViewController: UIViewController, UITableViewDataSource, UITableV
                 self.searchImage.alpha = 1.0
                 if self.videoData.count == 0{
                     self.searchText.alpha = 1.0
+                    self.searchIcon.alpha = 1.0
                 }
                 
             })

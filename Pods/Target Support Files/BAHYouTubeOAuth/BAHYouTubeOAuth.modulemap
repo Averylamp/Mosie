@@ -1,6 +1,0 @@
-framework module BAHYouTubeOAuth {
-  umbrella header "BAHYouTubeOAuth-umbrella.h"
-
-  export *
-  module * { export * }
-}

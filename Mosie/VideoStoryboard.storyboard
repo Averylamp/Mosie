@@ -51,7 +51,7 @@
                                                     <rect key="frame" x="109" y="15" width="550" height="480"/>
                                                     <subviews>
                                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IgT-RJ-uKU">
-                                                            <rect key="frame" x="257" y="169" width="37" height="37"/>
+                                                            <rect key="frame" x="257" y="169" width="550" height="375"/>
                                                             <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         </activityIndicatorView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NyanCat12331231" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GH-sf-5NT">
@@ -139,6 +139,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_filled" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-vU-bcs">
+                                <rect key="frame" x="284" y="362" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="S4b-AY-qS7"/>
+                                    <constraint firstAttribute="height" constant="200" id="rlZ-Vs-2g7"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="PwH-y2-0Ot">
                                 <rect key="frame" x="572" y="85" width="30" height="30"/>
                                 <constraints>
@@ -147,7 +154,10 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for a video in the search bar above" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCk-e2-NyU">
-                                <rect key="frame" x="153.5" y="358.5" width="461" height="307"/>
+                                <rect key="frame" x="153" y="562" width="461" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OeC-fK-SK1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -156,7 +166,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0l4-WV-bHp" firstAttribute="top" secondItem="gS2-ro-KMn" secondAttribute="bottom" constant="10" id="3e7-lh-gC1"/>
-                            <constraint firstItem="CCk-e2-NyU" firstAttribute="centerY" secondItem="4lh-YT-JXu" secondAttribute="centerY" id="Cx8-Bf-I7d"/>
+                            <constraint firstItem="CCk-e2-NyU" firstAttribute="top" secondItem="eqe-vU-bcs" secondAttribute="bottom" id="B4X-Ch-03g"/>
+                            <constraint firstItem="CCk-e2-NyU" firstAttribute="centerY" secondItem="4lh-YT-JXu" secondAttribute="centerY" constant="100" id="Cx8-Bf-I7d"/>
                             <constraint firstItem="opM-iv-NAq" firstAttribute="top" secondItem="gS2-ro-KMn" secondAttribute="bottom" constant="50" id="HYp-BJ-BlA"/>
                             <constraint firstItem="6wf-Il-hcO" firstAttribute="top" secondItem="0l4-WV-bHp" secondAttribute="bottom" constant="20" id="MZW-jH-SvC"/>
                             <constraint firstItem="PwH-y2-0Ot" firstAttribute="centerY" secondItem="opM-iv-NAq" secondAttribute="centerY" id="NF9-7m-e18"/>
@@ -165,9 +176,9 @@
                             <constraint firstItem="6wf-Il-hcO" firstAttribute="centerX" secondItem="4lh-YT-JXu" secondAttribute="centerX" id="WUl-uQ-2bH"/>
                             <constraint firstItem="PwH-y2-0Ot" firstAttribute="centerY" secondItem="opM-iv-NAq" secondAttribute="centerY" id="ZRJ-vD-FzI"/>
                             <constraint firstItem="CCk-e2-NyU" firstAttribute="centerX" secondItem="4lh-YT-JXu" secondAttribute="centerX" id="dxL-Gt-ZhM"/>
-                            <constraint firstItem="CCk-e2-NyU" firstAttribute="height" secondItem="4lh-YT-JXu" secondAttribute="height" multiplier="0.3" id="fIY-9r-9Jh"/>
                             <constraint firstItem="opM-iv-NAq" firstAttribute="top" secondItem="gS2-ro-KMn" secondAttribute="bottom" constant="8" symbolic="YES" id="fQj-cP-fBO"/>
                             <constraint firstItem="CCk-e2-NyU" firstAttribute="width" secondItem="4lh-YT-JXu" secondAttribute="width" multiplier="0.6" id="ggi-BY-Iby"/>
+                            <constraint firstItem="eqe-vU-bcs" firstAttribute="centerX" secondItem="CCk-e2-NyU" secondAttribute="centerX" id="n0d-Ou-Hhe"/>
                             <constraint firstItem="opM-iv-NAq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0l4-WV-bHp" secondAttribute="trailing" constant="10" id="oXA-UD-TKj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="opM-iv-NAq" secondAttribute="trailing" constant="20" id="ro5-el-ACG"/>
                             <constraint firstItem="opM-iv-NAq" firstAttribute="centerY" secondItem="0l4-WV-bHp" secondAttribute="centerY" constant="20" id="sGo-8m-wVP"/>
@@ -187,6 +198,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="searchIcon" destination="eqe-vU-bcs" id="2Lp-Sv-20W"/>
                         <outlet property="searchImage" destination="PwH-y2-0Ot" id="Qg4-9o-Ara"/>
                         <outlet property="searchText" destination="CCk-e2-NyU" id="vBu-ia-z26"/>
                         <outlet property="videoSearchTextField" destination="opM-iv-NAq" id="FMu-zK-ewk"/>
@@ -331,5 +343,6 @@
         <image name="happy" width="1152" height="618"/>
         <image name="play" width="100" height="100"/>
         <image name="search" width="100" height="100"/>
+        <image name="search_filled" width="100" height="100"/>
     </resources>
 </document>
