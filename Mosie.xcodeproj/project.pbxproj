@@ -44,8 +44,8 @@
 		BBB369F01D569C45008D43AE /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369EF1D569C45008D43AE /* MoodViewController.swift */; };
 		BBB369F21D569D05008D43AE /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369F11D569D05008D43AE /* MoodCollectionViewCell.swift */; };
 		BBB369F41D569FAC008D43AE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB369F31D569FAC008D43AE /* UIColorExtension.swift */; };
-		BBB369F91D56A7D9008D43AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB369F81D56A7D9008D43AE /* AVFoundation.framework */; };
 		BBB369FB1D56A7E7008D43AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */; };
+		BBD9E82D1D56DBCA008023A2 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9E82C1D56DBCA008023A2 /* VideoTableViewCell.swift */; };
 		C0B07F9E6B8255065B674FEF /* Pods_Mosie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6AD9CEEA5D7CC12554E9DC /* Pods_Mosie.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +116,7 @@
 		BBB369F31D569FAC008D43AE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		BBB369F81D56A7D9008D43AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BBB369FA1D56A7E7008D43AE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BBD9E82C1D56DBCA008023A2 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6540181D567B4200AF80E8 /* VideoStoryboard.storyboard */,
+				BBD9E82C1D56DBCA008023A2 /* VideoTableViewCell.swift */,
 				BBB369F11D569D05008D43AE /* MoodCollectionViewCell.swift */,
 				BBB369EF1D569C45008D43AE /* MoodViewController.swift */,
 				BB65401E1D567BFD00AF80E8 /* RootVideoViewController.swift */,
@@ -510,6 +512,7 @@
 				BBB369F41D569FAC008D43AE /* UIColorExtension.swift in Sources */,
 				BB65401F1D567BFD00AF80E8 /* RootVideoViewController.swift in Sources */,
 				BB653FE61D56787E00AF80E8 /* AppDelegate.swift in Sources */,
+				BBD9E82D1D56DBCA008023A2 /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

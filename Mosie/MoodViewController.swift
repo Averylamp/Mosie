@@ -41,12 +41,27 @@ class MoodViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MoodCell", forIndexPath: indexPath) as! MoodCollectionViewCell
         cell.tag = indexPath.item
         cell.layer.cornerRadius = 5
-        cell.layer.shadowOpacity = 0.8
-        cell.layer.shadowColor = UIColor.blackColor().CGColor
-        cell.layer.shadowOffset = CGSizeMake(20, 20)
-        cell.layer.shadowRadius = 100
+//        cell.layer.shadowOpacity = 0.5
+//        cell.layer.shadowColor = UIColor.blackColor().CGColor
+//        cell.layer.shadowOffset = CGSizeMake(5, 5)
+//        cell.layer.shadowRadius = 10
+        cell.backgroundColor = nil
+        cell.backgroundView = nil
         
-        cell.randomizeBGColor()
+        
+        switch indexPath.item % 4 {
+        case 0:
+            cell.moodMonsterImage.image = UIImage(named: "happy")
+        case 1:
+            cell.moodMonsterImage.image = UIImage(named: "excited")
+        case 2:
+            cell.moodMonsterImage.image = UIImage(named: "angry")
+        case 3:
+            cell.moodMonsterImage.image = UIImage(named: "sad")
+        default:
+            cell.moodMonsterImage.image = UIImage(named: "happy")
+        }
+        
         
         return cell
         
