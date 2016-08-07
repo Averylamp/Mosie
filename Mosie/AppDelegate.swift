@@ -28,7 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(lyrics)
 
                 print("Naughty: \(api.isNaughty(lyrics))")
-                api.playSong(results[0]["track"]["track_spotify_id"].string!);
+                api.playSong(results[0]["track"]["track_spotify_id"].string!) {
+                    // started playing
+                };
 
             }
         }

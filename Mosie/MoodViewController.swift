@@ -38,13 +38,21 @@ class MoodViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell = collectionView.cellForItemAtIndexPath(indexPath);
         
         if cell!.tag == 1 { // happy
-            APIMagic().playPlaylist("spotify:user:1249991492:playlist:6jfh1sX0fX06rwYNmjbBKt")
+            APIMagic().playPlaylist("spotify:user:1249991492:playlist:6jfh1sX0fX06rwYNmjbBKt") {
+                
+            }
         } else if cell!.tag == 2 { // excited
-            APIMagic().playPlaylist("spotify:user:1249991492:playlist:3uI1toPZXVhmLprsGXQFkV")
+            APIMagic().playPlaylist("spotify:user:1249991492:playlist:3uI1toPZXVhmLprsGXQFkV") {
+                
+            }
         } else if cell!.tag == 3 { // angry
-            APIMagic().playPlaylist("spotify:user:1249991492:playlist:3M6etJu6FIaZgB7WYTxa8j")
+            APIMagic().playPlaylist("spotify:user:1249991492:playlist:3M6etJu6FIaZgB7WYTxa8j") {
+                
+            }
         } else { // sad
-            APIMagic().playPlaylist("spotify:user:1249991492:playlist:1cxBlGujdByoiMyANqeUqN")
+            APIMagic().playPlaylist("spotify:user:1249991492:playlist:1cxBlGujdByoiMyANqeUqN") {
+                
+            }
         }
     }
     
