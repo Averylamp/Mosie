@@ -48,6 +48,7 @@
 		BBD9E82D1D56DBCA008023A2 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9E82C1D56DBCA008023A2 /* VideoTableViewCell.swift */; };
 		BBD9E8351D571112008023A2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9E8341D571112008023A2 /* SwiftyJSON.swift */; };
 		BBD9E8371D5734A8008023A2 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9E8361D5734A8008023A2 /* VideoPlayerViewController.swift */; };
+		BBD9E8711D57838B008023A2 /* FilterSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9E8701D57838B008023A2 /* FilterSettingsTableViewCell.swift */; };
 		C0B07F9E6B8255065B674FEF /* Pods_Mosie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6AD9CEEA5D7CC12554E9DC /* Pods_Mosie.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,7 @@
 		BBD9E82C1D56DBCA008023A2 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		BBD9E8341D571112008023A2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		BBD9E8361D5734A8008023A2 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		BBD9E8701D57838B008023A2 /* FilterSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSettingsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				BBB369D01D568C5E008D43AE /* SettingsStoryboard.storyboard */,
+				BBD9E8701D57838B008023A2 /* FilterSettingsTableViewCell.swift */,
 				BBB369D21D568C6E008D43AE /* SettingsViewController.swift */,
 			);
 			name = "Settings Section";
@@ -514,6 +517,7 @@
 				BB674FBF1D56C9AB000C9A35 /* SongControlBarViewController.swift in Sources */,
 				BBB369D31D568C6E008D43AE /* SettingsViewController.swift in Sources */,
 				BB653FEE1D56787E00AF80E8 /* Mosie.xcdatamodeld in Sources */,
+				BBD9E8711D57838B008023A2 /* FilterSettingsTableViewCell.swift in Sources */,
 				BB674FBD1D56C6E0000C9A35 /* PlaybackBarView.swift in Sources */,
 				BB6540211D567C3500AF80E8 /* RootAudioViewController.swift in Sources */,
 				BBD9E8351D571112008023A2 /* SwiftyJSON.swift in Sources */,

@@ -3,7 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Panton-Regular.otf">
+            <string>Panton-Regular</string>
+            <string>Panton-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Settings View Controller-->
         <scene sceneID="uIC-7B-PWn">
@@ -16,7 +23,62 @@
                     <view key="view" contentMode="scaleToFill" id="FGj-tR-oRv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="41" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ovd-YO-FmQ">
+                                <rect key="frame" x="0.0" y="200" width="600" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="41" id="84b-8f-Tsr" customClass="FilterSettingsTableViewCell" customModule="Mosie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="41"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="84b-8f-Tsr" id="nbj-8Y-j4F">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="40.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Word: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp4-uO-srp">
+                                                    <rect key="frame" x="28" y="0.0" width="96.5" height="40.5"/>
+                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92K-YO-lBI">
+                                                    <rect key="frame" x="512" y="0.0" width="60" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="0zD-0T-4Ku"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="15"/>
+                                                    <state key="normal" title="Remove">
+                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="removeFilterWordClicked:" destination="84b-8f-Tsr" eventType="touchUpInside" id="fDg-y4-TCE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bp4-uO-srp" firstAttribute="centerY" secondItem="nbj-8Y-j4F" secondAttribute="centerY" id="9XH-2M-pKU"/>
+                                                <constraint firstItem="92K-YO-lBI" firstAttribute="height" secondItem="nbj-8Y-j4F" secondAttribute="height" id="MWn-YY-6rd"/>
+                                                <constraint firstItem="bp4-uO-srp" firstAttribute="leading" secondItem="nbj-8Y-j4F" secondAttribute="leadingMargin" constant="20" id="TwF-8Q-3ZJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="92K-YO-lBI" secondAttribute="trailing" constant="20" id="VFB-Kf-2HK"/>
+                                                <constraint firstItem="bp4-uO-srp" firstAttribute="height" secondItem="nbj-8Y-j4F" secondAttribute="height" id="dU9-Cs-HNf"/>
+                                                <constraint firstItem="92K-YO-lBI" firstAttribute="centerY" secondItem="nbj-8Y-j4F" secondAttribute="centerY" id="phA-v5-QlI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="filterWordLabel" destination="bp4-uO-srp" id="gVw-M0-qGF"/>
+                                            <outlet property="removeButton" destination="92K-YO-lBI" id="CLY-lU-JKd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ovd-YO-FmQ" firstAttribute="height" secondItem="FGj-tR-oRv" secondAttribute="height" constant="-200" id="REs-ll-EIR"/>
+                            <constraint firstItem="gjq-vT-8A8" firstAttribute="top" secondItem="Ovd-YO-FmQ" secondAttribute="bottom" id="StC-cr-epr"/>
+                            <constraint firstItem="Ovd-YO-FmQ" firstAttribute="width" secondItem="FGj-tR-oRv" secondAttribute="width" id="ZX4-KG-nXb"/>
+                            <constraint firstItem="Ovd-YO-FmQ" firstAttribute="centerX" secondItem="FGj-tR-oRv" secondAttribute="centerX" id="vbx-kW-EET"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5v-sa-Tuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
