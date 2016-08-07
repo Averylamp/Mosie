@@ -8,33 +8,32 @@
 
 import UIKit
 
-class RootAudioViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate  {
-
+class RootAudioViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate  {
+    
     @IBOutlet weak var songTableView: UITableView!
     
-    @IBOutlet weak var songSearchBar: UISearchBar!
     
-    @IBOutlet weak var searchBarHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchBarField: UITextField!
     
-    @IBOutlet weak var searchBarWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchBarIconImage: UIImageView!
     
-    @IBOutlet weak var searchBarLargeWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var songPlayerBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.backgroundColor = UIColor(red: 0.620, green: 0.353, blue: 0.545, alpha: 1.00)
         songTableView.separatorStyle = .None
         songTableView.dataSource = self
         songTableView.delegate   = self
         songTableView.backgroundColor = nil
         
-        self.songSearchBar.delegate = self
+        self.searchBarField.delegate = self
         
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,40 +44,58 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        print("Searching for  \(searchBar.text!)")
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print("Searching for  \(textField.text!)")
         
-    }
-    
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        searchBar.layoutIfNeeded()
-//        
-//        searchBarHeightConstraint.constant = 50
-//        searchBarWidthConstraint.active = false
-//        searchBarLargeWidthConstraint.active = true
-//        UIView.animateWithDuration(1.0) { 
-//            searchBar.layoutIfNeeded()
-//        }
-    }
-    
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        APIMagic().searchSpotify("\(textField.text!)") { (results) in
+            //            print(results)
+            
+            self.songDictioniaries = [[String:AnyObject]](count: results.count, repeatedValue: [String:AnyObject]())
+            
+            for index in 0..<results.count{
+                //                print(results[index]["track"]["artist_name"].string!)
+                var storeDictionary = [String:AnyObject]()
+                storeDictionary["songArtist"] = results[index]["track"]["artist_name"].string!
+                storeDictionary["songTitle"] = results[index]["track"]["track_name"].string!
+                print("\(storeDictionary)")
+                self.songDictioniaries[index] = storeDictionary
+            }
+            
+            self.songTableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+            
+        }
         
-//        searchBarHeightConstraint.constant = 50
-//        searchBarWidthConstraint.active = true
-//        searchBarLargeWidthConstraint.active = false
-//        UIView.animateWithDuration(1.0) {
-//            searchBar.layoutIfNeeded()
-//        }
+        return true
     }
+
+    func textFieldDidBeginEditing(textField: UITextField) {
+        textField.layoutIfNeeded()
+        UIView.animateWithDuration(0.6) {
+            self.searchBarIconImage.alpha = 0.0
+        }
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+        if textField.text == ""{
+            UIView.animateWithDuration(0.6) {
+                self.searchBarIconImage.alpha = 1.0
+            }
+        }else{
+            
+        }
+    }
+    
     //MARK: - Table View Delegate/Data Source
+    
+    var songDictioniaries = [[String:AnyObject]]()
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return songDictioniaries.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -87,49 +104,16 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.backgroundView = nil
         cell.contentView.backgroundColor = nil
         if indexPath.row % 2 == 0{
-//            cell.contentView.backgroundColor = UIColor(white: 1.0, alpha: 0.4)
+            //            cell.contentView.backgroundColor = UIColor(white: 1.0, alpha: 0.4)
             cell.contentView.backgroundColor = UIColor.whiteColor()
         }else{
-//            cell.contentView.backgroundColor = UIColor(white: 1.0, alpha: 0.8)
+            //            cell.contentView.backgroundColor = UIColor(white: 1.0, alpha: 0.8)
             cell.contentView.backgroundColor = UIColor(red: 0.941, green: 0.945, blue: 0.961, alpha: 1.00)
         }
         cell.songNumberLabel.text = "\(indexPath.row + 1)"
         
-        switch indexPath.row {
-        case 0:
-            cell.songTitleLabel.text = "Levels"
-            cell.songArtistLabel.text = "Avicii"
-        case 1:
-            cell.songTitleLabel.text = "Airplanes, Part II"
-            cell.songArtistLabel.text = "B.o.B feat Eminem"
-        case 2:
-            cell.songTitleLabel.text = "Sandstorm"
-            cell.songArtistLabel.text = "Darude"
-        case 3:
-            cell.songTitleLabel.text = "Falling (Wheathin Remix)"
-            cell.songArtistLabel.text = "Opia"
-        case 4:
-            cell.songTitleLabel.text = "Show Me Love (Big Wild Remix)"
-            cell.songArtistLabel.text = "Hundred Waters"
-        case 5:
-            cell.songTitleLabel.text = "Mr. Watson (BKAYE Remix)"
-            cell.songArtistLabel.text = "Cruel Youth"
-        case 6:
-            cell.songTitleLabel.text = "Dreams"
-            cell.songArtistLabel.text = "Joakim Karud"
-        case 7:
-            cell.songTitleLabel.text = "Gekko"
-            cell.songArtistLabel.text = "Oliver Heldens"
-        case 8:
-            cell.songTitleLabel.text = "You & Me"
-            cell.songArtistLabel.text = "Flume"
-        case 9:
-            cell.songTitleLabel.text = "Some"
-            cell.songArtistLabel.text = "Ahn Jung Jae & Sungha Jung"
-        default:
-            cell.songTitleLabel.text = "Gekko"
-            cell.songArtistLabel.text = "Oliver Heldens"
-        }
+        cell.songTitleLabel.text = songDictioniaries[indexPath.row]["songTitle"] as! String
+        cell.songArtistLabel.text = songDictioniaries[indexPath.row]["songArtist"] as! String
         let backgroundSelected = UIView(frame: CGRectMake(0,0, cell.frame.width, 80))
         backgroundSelected.backgroundColor = UIColor(red: 0.980, green: 0.867, blue: 0.553, alpha: 1.00)
         cell.selectedBackgroundView = backgroundSelected
@@ -137,23 +121,23 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
-
-    
-    func playSpotifyOnSpeaker(uri:String, title:String, artist:String){
-        
-        
-        
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        UIView.animateWithDuration(1.0) { 
+            self.songPlayerBottomConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        }
         
     }
+    
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

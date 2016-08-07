@@ -15,13 +15,24 @@ class SongControlBarViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet weak var songTitleLabel: UILabel!
+    @IBOutlet weak var songArtistLabel: UILabel!
+    
+    @IBOutlet weak var playPauseButton: UIButton!
 
+    @IBOutlet weak var songProgressView: UIProgressView!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
+    @IBAction func playPauseClicked(sender: AnyObject) {
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 

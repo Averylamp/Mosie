@@ -30,12 +30,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MosieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0l4-WV-bHp">
-                                <rect key="frame" x="210" y="30" width="308" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="3v7-Yo-BZP"/>
-                                </constraints>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="510" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6wf-Il-hcO">
                                 <rect key="frame" x="0.0" y="150" width="768" height="874"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,15 +124,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="opM-iv-NAq">
-                                <rect key="frame" x="528" y="75" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="C7G-yI-l4y"/>
-                                    <constraint firstAttribute="height" constant="50" id="Oo0-L6-Eka"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_filled" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-vU-bcs">
                                 <rect key="frame" x="284" y="362" width="200" height="200"/>
                                 <constraints>
@@ -146,8 +131,17 @@
                                     <constraint firstAttribute="height" constant="200" id="rlZ-Vs-2g7"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="PwH-y2-0Ot">
-                                <rect key="frame" x="572" y="85" width="30" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="opM-iv-NAq">
+                                <rect key="frame" x="528" y="70" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="C7G-yI-l4y"/>
+                                    <constraint firstAttribute="height" constant="50" id="Oo0-L6-Eka"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="PwH-y2-0Ot">
+                                <rect key="frame" x="538" y="80" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="IER-ls-JPi"/>
                                     <constraint firstAttribute="width" constant="30" id="P9G-3B-rvh"/>
@@ -162,6 +156,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MosieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0l4-WV-bHp">
+                                <rect key="frame" x="210" y="30" width="308" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3v7-Yo-BZP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -181,7 +181,7 @@
                             <constraint firstItem="eqe-vU-bcs" firstAttribute="centerX" secondItem="CCk-e2-NyU" secondAttribute="centerX" id="n0d-Ou-Hhe"/>
                             <constraint firstItem="opM-iv-NAq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0l4-WV-bHp" secondAttribute="trailing" constant="10" id="oXA-UD-TKj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="opM-iv-NAq" secondAttribute="trailing" constant="20" id="ro5-el-ACG"/>
-                            <constraint firstItem="opM-iv-NAq" firstAttribute="centerY" secondItem="0l4-WV-bHp" secondAttribute="centerY" constant="20" id="sGo-8m-wVP"/>
+                            <constraint firstItem="opM-iv-NAq" firstAttribute="centerY" secondItem="0l4-WV-bHp" secondAttribute="centerY" constant="15" id="sGo-8m-wVP"/>
                             <constraint firstItem="6wf-Il-hcO" firstAttribute="width" secondItem="4lh-YT-JXu" secondAttribute="width" id="t4D-jO-tGB"/>
                             <constraint firstItem="0l4-WV-bHp" firstAttribute="width" secondItem="4lh-YT-JXu" secondAttribute="width" multiplier="0.4" id="uNg-n8-iGn"/>
                             <constraint firstItem="0l4-WV-bHp" firstAttribute="centerX" secondItem="4lh-YT-JXu" secondAttribute="centerX" priority="900" id="vJV-JY-6zV"/>
