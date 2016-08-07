@@ -19,4 +19,23 @@ class APIMagic {
         }
         
         }
+    func playSong(spotifyId: String) {
+        print("ayy")
+        Alamofire.request(.POST, "http://10.20.6.202:8090/select", parameters: [
+            "ContentItem": [
+                "source": "SPOTIFY",
+                "type": "uri",
+                "location": "spotify:track:" + spotifyId,
+                "sourceAccount": "bosehack8"
+            ]], headers: ["Accept" : "application/json"], encoding: .JSON)
+            .response { request, response, data, error in
+                print("\(response)")
+                print("\(error)")
+                print("lmao")
+
+        }
+        
     }
+}
+
+
