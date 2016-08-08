@@ -11,6 +11,7 @@ import UIKit
 class SongTableViewCell: UITableViewCell {
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var songArtistLabel: UILabel!
+    @IBOutlet weak var filterResults: UILabel!
 
     @IBOutlet weak var songNumberLabel: UILabel!
     override func awakeFromNib() {

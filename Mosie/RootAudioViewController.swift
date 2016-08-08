@@ -190,6 +190,14 @@ class RootAudioViewController: UIViewController, UITableViewDelegate, UITableVie
         backgroundSelected.backgroundColor = UIColor(red: 0.980, green: 0.867, blue: 0.553, alpha: 1.00)
         cell.selectedBackgroundView = backgroundSelected
         
+        var dirtyStrings = ""
+        if let dirtyArray = activeDictionary[indexPath.row]["naughty_results"]?.array {
+            for string in dirtyArray{
+                dirtyStrings = "\(dirtyStrings)\(string), "
+            }
+        }
+        print(dirtyStrings)
+        
         return cell
     }
     

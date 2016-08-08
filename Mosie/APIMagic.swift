@@ -25,7 +25,7 @@ class APIMagic {
             .response { request, response, data, error in
                 let json = JSON(data: data!)
                 let lyrics:String? = json["message"]["body"]["lyrics"]["lyrics_body"].string
-                print("Lyrics: \(json)")
+//                print("Lyrics: \(json)")
                 if let lyric = lyrics {
                     if lyric.characters.count == 0 {
                         return                     closure(lyrics: "NO LYRICS FOUND")
