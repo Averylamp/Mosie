@@ -4,7 +4,7 @@ Mosie provides a censored video and music experience to children under 13. Using
 
 Contributers:
 
-Avery Lamp, Cesar de Cal, Isaiah Turner, Sarah Greisdorf
+Avery Lamp, Cesare de Cal, Isaiah Turner, Sarah Greisdorf
 
 
 If you would like to see more things that I (Avery Lamp) has made, check out my:
